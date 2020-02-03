@@ -1,15 +1,15 @@
 # Table of Contents
-[DEMO](https://wesselsmit.github.io/web-app-from-scratch-1920/)
-[Assignment](#assignment)
-[Goal](#goal)
-[Install-Notes](#install-notes)
-[Features](#features)
-[Actors](#actors)
-[API](#api)
-[Data](#data)
-[Interaction](#interaction)
-[Design-Patterns-and-Best-Practices](#design-patterns-and-best-practices)
-[Credits](#credits)
+* [DEMO](https://wesselsmit.github.io/web-app-from-scratch-1920/)
+* [Assignment](#assignment)
+* [Goal](#goal)
+* [Install-Notes](#install-notes)
+* [Features](#features)
+* [Actors](#actors)
+* [API](#api)
+* [Data](#data)
+* [Interaction](#interaction)
+* [Design-Patterns-and-Best-Practices](#design-patterns-and-best-practices)
+* [Credits](#credits)
 
 # HIER MOET EEN SCREENSHOT KOMEN
 
@@ -49,19 +49,10 @@ Run de applicatie met een code editor live preview of host de source code met se
 
 # Design Patterns and Best Practices
 
+# Stuff I Want To Do
+- [] 
+- []
+
 # Credits
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+[License](https://github.com/WesselSmit/web-app-from-scratch-1920/blob/master/LICENSE)
