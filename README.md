@@ -1,26 +1,15 @@
 # Table of Contents
 [DEMO](https://wesselsmit.github.io/web-app-from-scratch-1920/)
-
 [Assignment](#assignment)
-
 [Goal](#goal)
-
 [Install-Notes](#install-notes)
-
 [Features](#features)
-
 [Actors](#actors)
-
 [API](#api)
-
 [Data](#data)
-
 [Interaction](#interaction)
-
 [Design-Patterns-and-Best-Practices](#design-patterns-and-best-practices)
-
 [Credits](#credits)
-
 
 # HIER MOET EEN SCREENSHOT KOMEN
 
