@@ -1,24 +1,74 @@
 /* General */
+:root {
+    --background-color: #21213E;
+    --primary-color: #0FB7FB;
+    --secondary-color: #3B3C5B;
+    --normal-text-color: #FFFFFF;
+    --special-text-colot: #777095;
+    --border-radius: 4px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 body {
     margin: 0px;
     overflow: hidden;
-    background-color: red;
+    background-color: var(--background-color);
 }
 
 section {
-    width: 400px;
-    height: 600px;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+    transform: translate(-50%, 0%);
+    overflow: hidden;
+    background-color: var(--background-color);
 }
 
-section.hidden {
+.hidden {
     position: absolute;
     left: -9999px;
+}
+
+@media only screen and (min-width: 400px) {
+    section {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+h1,
+h2 {
+    font-weight: 900;
+    font-size: 20px;
+    grid-column: 2 / 3;
+    color: var(--normal-text-color);
+    align-self: end;
+    margin: 0px;
+}
+
+h2::before {
+    font-size: 12px;
+    display: block;
+    color: var(--special-text-colot);
+}
+
+button {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    color: var(--normal-text-color);
+    cursor: pointer;
+    height: 45px;
+    width: 160px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 
@@ -29,16 +79,25 @@ section.hidden {
 /* Questions */
 #questions {
     display: grid;
-    padding: 0px 30px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 100px 200px 100px;
+    grid-template-columns: 30px 1fr 1fr 30px;
+    grid-template-rows: 50px 200px 80px 150px 150px auto;
 }
 
-#questions h1 {
-    grid-column: 1 / -1;
+#questions h2 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    align-self: start;
 }
 
-#questions button {}
+#questions h2::before {
+    content: "Question";
+}
+
+#questions button {
+    grid-column: 3 / 4;
+    grid-row: 6 / 6;
+    align-self: start;
+}
 
 
 /* Scoreboard */
