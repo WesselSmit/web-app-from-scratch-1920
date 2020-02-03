@@ -1,0 +1,20 @@
+{
+    "short_name": "Trivia",
+    "name": "Trivia",
+    "icons": [{
+            "src": "./media/logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "./media/logo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "start_url": "index.html",
+    "background_color": "0FB7FB",
+    "display": "fullscreen",
+    "scope": "/Trivia/",
+    "theme_color": "#0FB7FB"
+}
