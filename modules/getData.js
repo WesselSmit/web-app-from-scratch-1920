@@ -1,5 +1,7 @@
-export default async function getData() {
-    const rawData = await fetch("https://opentdb.com/api.php?amount=10&category=25&difficulty=medium");
-    const jsonData = await rawData.json();
+export default async function getData(triviaSettings) {
+    const url = "https://opentdb.com/api.php?amount=" + triviaSettings.numberOfQuestions + "&category=" + triviaSettings.category +
+        "&difficulty=" + triviaSettings.difficulty + "&type=" + triviaSettings.type,
+        rawData = await fetch(url),
+        jsonData = await rawData.json();
     return jsonData.results;
 }

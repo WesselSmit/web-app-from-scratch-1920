@@ -1,3 +1,44 @@
-* {
-    background-color: green;
+/* General */
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: red;
 }
+
+section {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+section.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+
+/* Settings */
+
+
+
+/* Questions */
+#questions {
+    display: grid;
+    padding: 0px 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 100px 200px 100px;
+}
+
+#questions h1 {
+    grid-column: 1 / -1;
+}
+
+#questions button {}
+
+
+/* Scoreboard */
