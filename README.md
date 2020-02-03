@@ -1,28 +1,28 @@
 # Table of Contents
-[DEMO] (https://wesselsmit.github.io/web-app-from-scratch-1920/)
+[DEMO](https://wesselsmit.github.io/web-app-from-scratch-1920/)
 
-[Assignment] (#assignment)
+[Assignment](#assignment)
 
-[Goal] (#goal)
+[Goal](#goal)
 
-[Install-Notes] (#install-notes)
+[Install-Notes](#install-notes)
 
-[Features] (#features)
+[Features](#features)
 
-[Actors] (#actors)
+[Actors](#actors)
 
-[API] (#api)
+[API](#api)
 
-[Data] (#data)
+[Data](#data)
 
-[Interaction] (#interaction)
+[Interaction](#interaction)
 
-[Design-Patterns-and-Best-Practices] (#design-patterns-and-best-practices)
+[Design-Patterns-and-Best-Practices](#design-patterns-and-best-practices)
 
-[Credits] (#credits)
+[Credits](#credits)
 
 
-<p style="color: red;">hier moet een image komen</p>
+# HIER MOET EEN SCREENSHOT KOMEN
 
 # Assignment
 
