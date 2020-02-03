@@ -50,7 +50,9 @@ Run de applicatie met een code editor live preview of host de source code met se
 # Design Patterns and Best Practices
 
 # Stuff I Want To Do
-* 
-* 
+- [] 
+- []
 
 # Credits
+
+[License](https://github.com/WesselSmit/web-app-from-scratch-1920/blob/master/LICENSE)
