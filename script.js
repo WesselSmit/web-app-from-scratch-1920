@@ -28,8 +28,9 @@ function fetchData() {
 
 function updateContent(index) {
     const quiz = document.getElementById('questions')
-    let possibleAnswers = fetchedData[index].incorrect_answers.concat(fetchedData[index].correct_answer),
+    let possibleAnswers = [...fetchedData[index].incorrect_answers, ...[fetchedData[index].correct_answer]],
         answerBlocks = []
+    console.log(possibleAnswers)
 
     quiz.querySelector('h2').innerHTML = fetchedData[index].question
 

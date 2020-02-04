@@ -10,6 +10,11 @@
             "src": "./media/favicon-32x32.png",
             "type": "image/png",
             "sizes": "32x32"
+        },
+        {
+            "src": "./media/favicon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ],
     "start_url": "index.html",
