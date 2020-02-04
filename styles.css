@@ -77,9 +77,101 @@ button:hover {
     color: var(--primary-color);
 }
 
+button:focus {
+    outline: none;
+}
+
+div.select-box {
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+    grid-column: 2 / 4;
+    background-color: var(--secondary-color);
+    height: 40px;
+    background-image: url(./media/dropdown.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+div.select-box::before {
+    color: var(--normal-text-color);
+    position: relative;
+    top: -22px;
+    font-size: 12px;
+}
+
+div.select-box:nth-of-type(1)::before {
+    content: "Number of questions";
+}
+
+div.select-box:nth-of-type(2)::before {
+    content: "Category";
+}
+
+div.select-box:nth-of-type(3)::before {
+    content: "Difficulty";
+}
+
+div.select-box select {
+    color: var(--normal-text-color);
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+
+div.select-box select:focus,
+div.select-box select:active {
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+div.select-box select option {
+    text-align: left;
+}
+
 
 
 /* Settings */
+#settings {
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr 30px;
+    grid-template-rows: 50px 1fr 80px 80px 80px 80px 80px;
+}
+
+#settings h2 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    align-self: start;
+}
+
+#settings h2::before {
+    content: "Setup";
+    font-weight: 400;
+}
+
+#settings div.select-box:nth-of-type(1) {
+    grid-row: 4 / 4;
+}
+
+#settings div.select-box:nth-of-type(2) {
+    grid-row: 5 / 5;
+}
+
+#settings div.select-box:nth-of-type(3) {
+    grid-row: 6 / 6;
+}
+
+#settings button {
+    grid-column: 3 / 4;
+    grid-row: 7 / 7;
+    align-self: start;
+    justify-self: center;
+}
+
 
 
 
@@ -98,6 +190,7 @@ button:hover {
 
 #questions h2::before {
     content: "Question";
+    font-weight: 400;
 }
 
 #questions div {
@@ -185,7 +278,6 @@ button:hover {
     grid-row: 6 / 6;
     align-self: start;
     justify-self: center;
-    width: 150px;
 }
 
 

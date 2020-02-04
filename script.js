@@ -3,7 +3,7 @@ import getData from './modules/getData.js'
 let fetchedData,
     triviaSettings = {
         "limit": 10,
-        "category": 20,
+        "category": 9,
         "difficulty": "medium",
         "type": "multiple"
     }

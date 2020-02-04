@@ -10,14 +10,47 @@
 </head>
 
 <body>
-    <section id="settings" class="hidden">
+    <section id="settings" class="">
         <!-- settings -->
         <h1>Setup</h1>
+
+        <h2>Setup game settings</h2>
+
+        <div class="select-box">
+            <select id="limit">
+                <option value="10" disabled selected hidden>10</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+
+        <div class="select-box">
+            <select id="Category">
+                <option value="9" disabled selected hidden>General Knowledge</option>
+                <option value="9">General knowledge</option>
+                <option value="11">Films</option>
+                <option value="15">Games</option>
+                <option value="21">Sport</option>
+                <option value="25">Art</option>
+                <option value="26">Celebrities</option>
+            </select>
+        </div>
+
+        <div class="select-box">
+            <select id="difficulty">
+                <option value="medium" disabled selected hidden>Medium</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
 
         <button>Start</button>
     </section>
 
-    <section id="questions">
+    <section id="questions" class="hidden">
         <h1>Questions</h1>
 
         <!-- Progress -->
