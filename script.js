@@ -44,7 +44,9 @@ function updateContent(index) {
         }
     })
 }
+// TODO voeg answered class toe aan het antwoord waar op geklikt is
 
+// TODO lees de bronnen in de excersises & slides
 
 document.querySelector('section:nth-of-type(2) button').addEventListener('click', () => {
     currentQuestion++

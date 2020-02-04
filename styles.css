@@ -36,7 +36,7 @@ section {
     left: -9999px;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 500px) {
     section {
         width: fit-content;
         height: fit-content;
@@ -232,6 +232,15 @@ div.select-box select option {
     height: 110px;
     padding: 10px;
     display: flex;
+}
+
+#questions div.answered {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+#questions div.correct {
+    border-color: red;
 }
 
 #questions div::before {
