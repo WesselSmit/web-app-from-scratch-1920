@@ -6,7 +6,8 @@ let fetchedData,
         "category": 9,
         "difficulty": "medium",
         "type": "multiple"
-    }
+    },
+    currentQuestion = 0
 
 document.querySelector('section:first-of-type button').addEventListener('click', () => {
     triviaSettings.limit = +document.getElementById('limit').value
@@ -20,22 +21,25 @@ document.querySelector('section:first-of-type button').addEventListener('click',
 function fetchData() {
     getData(triviaSettings)
         .then(jsonData => fetchedData = jsonData)
-        .then(() => renderQuestions())
+        .then(() => updateContent(0))
         .catch(err => console.log(err))
 }
 
-function renderQuestions() {
-    console.log(fetchedData)
-    for (const question of fetchedData) {
-        console.log(question)
-    }
+function updateContent(index) {
+    console.log(index, fetchedData[index])
+
+    const quiz = document.getElementById('questions')
+    quiz.querySelector('h2').innerHTML = fetchedData[index].question
+
 }
 
 document.querySelector('section:nth-of-type(2) button').addEventListener('click', () => {
-    // if (
-    //TODO hier moet een check komen die kijkt of alle vragen beantwoord zijn
-    // ) {
-    document.getElementById('questions').classList.toggle('hidden')
-    document.getElementById('results').classList.toggle('hidden')
-    // }
+    currentQuestion++
+
+    if (currentQuestion > fetchedData.length - 1) {
+        document.getElementById('questions').classList.toggle('hidden')
+        document.getElementById('results').classList.toggle('hidden')
+    } else {
+        updateContent(currentQuestion)
+    }
 })

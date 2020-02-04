@@ -13,7 +13,7 @@
         }
     ],
     "start_url": "index.html",
-    "background_color": "#0FB7FB",
+    "background_color": "#21213E",
     "display": "fullscreen",
     "scope": "/",
     "theme_color": "#0FB7FB"

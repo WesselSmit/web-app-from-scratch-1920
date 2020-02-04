@@ -9,6 +9,10 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
+::selection {
+    background-color: none;
+}
+
 body {
     margin: 0px;
     background-color: var(--background-color);
@@ -200,13 +204,14 @@ div.select-box select option {
 #questions {
     display: grid;
     grid-template-columns: 30px 1fr 1fr 30px;
-    grid-template-rows: 50px 1fr 40px 1fr 1fr 80px;
+    grid-template-rows: 50px 1fr auto 150px 150px 80px;
 }
 
 #questions h2 {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
     align-self: start;
+    margin-bottom: 20px;
 }
 
 #questions h2::before {
@@ -222,7 +227,6 @@ div.select-box select option {
     border-radius: var(--border-radius);
     cursor: pointer;
     margin: 7px;
-    /* width: 130px; */
     width: calc(100% - 40px);
     height: 110px;
     padding: 10px;
