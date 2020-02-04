@@ -2,13 +2,20 @@ import getData from './modules/getData.js'
 
 let fetchedData,
     triviaSettings = {
-        "numberOfQuestions": 10,
+        "limit": 10,
         "category": 20,
         "difficulty": "medium",
         "type": "multiple"
     }
 
 getData(triviaSettings)
-    .then(data => fetchedData = data)
-    .then(data => console.log(fetchedData))
+    // .then(response => {
+    //     if (response.ok) {
+    //         console.log(response)
+    //     } else {
+    //         return Promise.reject(response)
+    //     }
+    // })
+    .then(jsonData => fetchedData = jsonData)
+    .then(() => console.log(fetchedData))
     .catch(err => console.log(err))
