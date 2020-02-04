@@ -38,7 +38,7 @@ section {
 
 @media only screen and (min-width: 500px) {
     section {
-        width: fit-content;
+        max-width: 500px;
         height: fit-content;
         max-height: 70vh;
     }
@@ -229,6 +229,7 @@ div.select-box select option {
     cursor: pointer;
     margin: 7px;
     width: calc(100% - 40px);
+    max-width: 150px;
     height: 110px;
     padding: 10px;
     display: flex;
