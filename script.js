@@ -1,4 +1,5 @@
 import getData from './modules/getData.js'
+import helper from './modules/helperFunctions.js'
 
 let fetchedData,
     triviaSettings = {
@@ -26,16 +27,29 @@ function fetchData() {
 }
 
 function updateContent(index) {
-    console.log(index, fetchedData[index])
-
     const quiz = document.getElementById('questions')
+    let possibleAnswers = fetchedData[index].incorrect_answers.concat(fetchedData[index].correct_answer),
+        answerBlocks = []
+
     quiz.querySelector('h2').innerHTML = fetchedData[index].question
 
+    document.querySelectorAll('#questions div').forEach(block => answerBlocks.push(block))
+    helper.randomizeArr(answerBlocks)
+
+    answerBlocks.forEach((item, i) => {
+        item.querySelector('p').innerHTML = possibleAnswers[i]
+        item.classList.remove('correct')
+        if (i === 3) { //this is the correct answer
+            item.classList.add('correct')
+        }
+    })
 }
+
 
 document.querySelector('section:nth-of-type(2) button').addEventListener('click', () => {
     currentQuestion++
 
+    // TODO moet nog een check komen of er een antwoord is gegeven
     if (currentQuestion > fetchedData.length - 1) {
         document.getElementById('questions').classList.toggle('hidden')
         document.getElementById('results').classList.toggle('hidden')
