@@ -2,19 +2,19 @@
     "short_name": "Trivia",
     "name": "Trivia",
     "icons": [{
-            "src": "./media/logo.png",
+            "src": "./media/favicon-16x16.png",
             "type": "image/png",
-            "sizes": "512x512"
+            "sizes": "16x16"
         },
         {
-            "src": "./media/logo.png",
+            "src": "./media/favicon-32x32.png",
             "type": "image/png",
-            "sizes": "192x192"
+            "sizes": "32x32"
         }
     ],
     "start_url": "index.html",
     "background_color": "#0FB7FB",
     "display": "fullscreen",
-    "scope": "/Trivia/",
+    "scope": "/",
     "theme_color": "#0FB7FB"
 }
