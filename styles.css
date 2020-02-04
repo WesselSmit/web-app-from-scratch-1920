@@ -122,8 +122,9 @@ div.select-box select {
     width: 100%;
     height: 100%;
     position: relative;
-    top: -20px;
+    top: -18px;
     -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 div.select-box select:focus,
@@ -143,7 +144,7 @@ div.select-box select option {
 #settings {
     display: grid;
     grid-template-columns: 30px 1fr 1fr 30px;
-    grid-template-rows: 50px 1fr 120px 80px 80px 80px 80px;
+    grid-template-rows: 50px 1fr 80px 80px 80px 80px 80px;
 }
 
 #settings span {
@@ -199,7 +200,7 @@ div.select-box select option {
 #questions {
     display: grid;
     grid-template-columns: 30px 1fr 1fr 30px;
-    grid-template-rows: 50px 1fr 80px 1fr 1fr 80px;
+    grid-template-rows: 50px 1fr 40px 1fr 1fr 80px;
 }
 
 #questions h2 {
