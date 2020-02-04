@@ -54,6 +54,7 @@ document.querySelector('section:nth-of-type(2) button').addEventListener('click'
         document.getElementById('questions').classList.toggle('hidden')
         document.getElementById('results').classList.toggle('hidden')
     } else {
+        console.log(currentQuestion)
         updateContent(currentQuestion)
     }
 })
