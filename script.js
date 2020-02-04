@@ -17,10 +17,14 @@ document.querySelector('section:first-of-type button').addEventListener('click',
     document.getElementById('questions').classList.toggle('hidden')
 })
 
-
 function fetchData(triviaSettings) {
     getData(triviaSettings)
         .then(jsonData => fetchedData = jsonData)
         .then(() => console.log(fetchedData))
         .catch(err => console.log(err))
 }
+
+document.querySelector('section:nth-of-type(2) button').addEventListener('click', () => {
+    document.getElementById('questions').classList.toggle('hidden')
+    document.getElementById('results').classList.toggle('hidden')
+})
