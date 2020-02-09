@@ -30,6 +30,8 @@ section {
     transform: translate(-50%, 0%);
     overflow: hidden;
     background-color: var(--background-color);
+    border: 1px solid var(--background-color);
+    border-radius: var(--border-radius);
 }
 
 .hidden {

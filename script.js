@@ -1,14 +1,17 @@
 import getData from './modules/getData.js'
 import helper from './modules/helperFunctions.js'
 
-let fetchedData,
-    triviaSettings = {
-        "limit": 10,
-        "category": 9,
-        "difficulty": "medium",
-        "type": "multiple"
-    },
-    currentQuestion = 0
+
+let fetchedData
+let triviaSettings = {
+    "limit": 10,
+    "category": 9,
+    "difficulty": "medium",
+    "type": "multiple"
+}
+let currentQuestion = 0
+
+// TODO: error --> soms krijg je geen data binnen (ligt miss aan ART moet je ff checken)
 
 document.querySelector('section:first-of-type button').addEventListener('click', () => {
     triviaSettings.limit = +document.getElementById('limit').value
@@ -21,15 +24,18 @@ document.querySelector('section:first-of-type button').addEventListener('click',
 
 function fetchData() {
     getData(triviaSettings)
+        // TODO maak een statuscode checker die of een error gooit of de functie verder uitvoert -> vb is in Joost's uitleg te zien (ook op slack)
         .then(jsonData => fetchedData = jsonData)
         .then(() => updateContent(0))
         .catch(err => console.log(err))
 }
 
+// TODO voeg alle categorieen toe die mogelijk zijn (ook 'any')
+
 function updateContent(index) {
     const quiz = document.getElementById('questions')
-    let possibleAnswers = [...fetchedData[index].incorrect_answers, ...[fetchedData[index].correct_answer]],
-        answerBlocks = []
+    let possibleAnswers = [...fetchedData[index].incorrect_answers, ...[fetchedData[index].correct_answer]]
+    let answerBlocks = []
     console.log(possibleAnswers)
 
     quiz.querySelector('h2').innerHTML = fetchedData[index].question
@@ -47,7 +53,7 @@ function updateContent(index) {
 }
 // TODO voeg answered class toe aan het antwoord waar op geklikt is
 
-// TODO lees de bronnen in de excersises & slides
+
 
 document.querySelector('section:nth-of-type(2) button').addEventListener('click', () => {
     currentQuestion++
