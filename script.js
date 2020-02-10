@@ -1,17 +1,57 @@
 import getData from './modules/getData.js'
-import helper from './modules/helperFunctions.js'
-
+import create from './modules/create.js'
+import utils from './modules/utils.js'
 
 let fetchedData
-let triviaSettings = {
-    "limit": 10,
-    "category": 9,
-    "difficulty": "medium",
-    "type": "multiple"
-}
+let settings
 let currentQuestion = 0
 
+// Routing (uses the Routie microJS library)
+routie({
+    'questionsVP': () => {
+        settings = utils.createSettingsObj()
+
+        getData(settings)
+            .then(data => fetchedData = data)
+            .then(data => create.questionsHTML(data))
+            .then(() => document.querySelectorAll('.answer').forEach(card => card.addEventListener('click', () => handleAnswer())))
+            .catch(err => console.log(err))
+    },
+    'resultsVP': () => {
+        console.log('TODO: maak hier een results viewport')
+    }
+})
+
+// TODO: de antwoorden moeten nog gerandomized worden voordat ze in de HTML gezet worden
+
+function handleAnswer() {
+    console.log('the user has clicked on an answer card', 'currentQuestion index: ', currentQuestion)
+    // todo de addeventlistener function call moet hetzelfde element meegeven of je nou op de "DIV" of op de "P" klikt
+    // console.log(event.target)
+    // console.log(event.target, event.target.children[0], event.target.children[0].textContent)
+    // utils.createUserObj(event.target, currentQuestion)
+
+    // TODO:
+    // - antwoord opslaan [moet een functie worden (UTILS module)]
+    // - nieuwe vraag + antwoorden inladen [moet een functie worden (RENDER module)]
+    // - checken of het de laatste vraag is. JA -> laad de knop zien om naar 'results' te gaan (deze moet het "resultsVP" ID hebben) (UTILS module)
+    currentQuestion++
+}
+
+// TODO: haal de next button uit de #question section --> als iemand op een antwoord klikt moet je naar de volgende vraag gaan
+
+/*
+let currentQuestion = 0
+
+// * Dit is code die de 'settings' viewport  html maakt
+// const htmlBody = document.querySelector('body')
+// htmlBody.insertAdjacentHTML('afterbegin', createHTML.createSettings())
+
+
 // TODO: error --> soms krijg je geen data binnen (ligt miss aan ART moet je ff checken)
+
+
+// TODO: haal de knop weg in de questions viewport --> ga naar de volgende vraag wanneer de gebruiker op een antwoord klikt
 
 document.querySelector('section:first-of-type button').addEventListener('click', () => {
     triviaSettings.limit = +document.getElementById('limit').value
@@ -67,3 +107,8 @@ document.querySelector('section:nth-of-type(2) button').addEventListener('click'
         updateContent(currentQuestion)
     }
 })
+
+// TODO: laatste viewport (results) --> per vraag aangeven of die correct/incorrect was, wat de vraag was, 
+// TODO: wat het gegeven antwoord was (indien nodig; wat het correcte antwoord was)
+// TODO: laat de gebruiker filteren op (in)correcte antwoorden --> op deze manier heb je een filter & sort in de applicatie zitten
+*/
