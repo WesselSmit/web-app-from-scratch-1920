@@ -1,34 +1,25 @@
-export default {
-    createSettingsObj,
-    createUserObj,
-    randomizeArr
+//Joins miltiple strings with a '-'
+export function joinString(joinChar, ...strings) {
+    return strings.join(joinChar)
 }
 
-function createSettingsObj() {
-    return {
-        "limit": document.getElementById('limit').value,
-        "category": document.getElementById('category').value,
-        "difficulty": document.getElementById('difficulty').value,
-        "type": "multiple"
-    }
+//Prefixes numbers/string with a zero if they aren't double digit
+export function prefixZero(item) {
+    item = item.toString()
+    return (item.length < 2) ? `0${item}` : item
 }
 
-// TODO: de antwoorden moeten nog gerandomized worden voordat ze in de HTML gezet worden
-
-function createUserObj(answer, index) {
-    console.log(answer, index)
-    // roep hier een functie aan die toevoegd of het antwoord goed was & wat het goede antwoord was
-    // return hier het gehele object
+//Checks if all passed arguments have the same value (returns bool)
+export function compareValues(base, ...items) {
+    return items.every(item => item === base)
 }
 
-// The randomizeArr() function is from Stackoverflow
-// Used source: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-function randomizeArr(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1)),
-            temp = array[i]
-        array[i] = array[j]
-        array[j] = temp
-    }
-    return array
+//Get latest data date
+export function getLastDataDate(data) {
+    return data[data.length - 1].date
+}
+
+export function createStartYearDate() {
+    const year = new Date().getFullYear()
+    return joinString('-', year, '01', '01')
 }

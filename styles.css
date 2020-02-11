@@ -1,317 +1,42 @@
-/* General */
-:root {
-    --background-color: #21213E;
-    --primary-color: #0FB7FB;
-    --secondary-color: #3B3C5B;
-    --normal-text-color: #FFFFFF;
-    --special-text-colot: #777095;
-    --border-radius: 4px;
-    font-family: Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: NASA;
+    src: url(./media/fonts/nasalization-rg.woff);
 }
 
-::selection {
-    background-color: none;
+:root {
+    --title-font: "NASA";
+    --normal-font: Arial, Helvetica, sans-serif;
 }
 
 body {
     margin: 0px;
-    background-color: var(--primary-color);
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
 }
 
-section {
-    width: 100vw;
+main {
+    overflow-y: hidden;
     height: 100vh;
 }
 
-article {
-    width: 500px;
-    height: 70vh;
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, 15vh);
-    overflow: hidden;
-    background-color: var(--background-color);
-    border: 1px solid var(--background-color);
-    border-radius: var(--border-radius);
+#overview {
+    overflow-y: scroll;
+    min-height: 100vh;
 }
 
-h1,
-h2 {
-    font-weight: 900;
-    font-size: 20px;
-    grid-column: 2 / 3;
-    color: var(--normal-text-color);
-    align-self: end;
-    margin: 0px;
-}
-
-h2::before {
-    font-size: 12px;
-    display: block;
-    color: var(--special-text-colot);
-}
-
-a {
-    background-color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    color: var(--normal-text-color);
-    cursor: pointer;
-    font-size: 15px;
-    width: 140px;
-    background-image: url(./media/next.svg);
-    background-repeat: no-repeat;
-    background-position: 95% center;
-    text-decoration: none;
-    text-align: center;
-    padding: 13px 0px;
-    justify-self: end;
-}
-
-a:hover {
-    background-image: url(./media/next_hover.svg);
-    background-color: var(--background-color);
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-div.select-box {
-    border: 1px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    width: 100%;
-    grid-column: 2 / 4;
-    background-color: var(--secondary-color);
-    height: 40px;
-    background-image: url(./media/dropdown.svg);
-    background-repeat: no-repeat;
-    background-position: 95% center;
-}
-
-div.select-box::before {
-    color: var(--normal-text-color);
-    position: relative;
-    top: -22px;
-    font-size: 12px;
-}
-
-div.select-box:nth-of-type(1)::before {
-    content: "Number of questions";
-}
-
-div.select-box:nth-of-type(2)::before {
-    content: "Category";
-}
-
-div.select-box:nth-of-type(3)::before {
-    content: "Difficulty";
-}
-
-div.select-box select {
-    color: var(--normal-text-color);
-    background-color: var(--secondary-color);
-    border: none;
-    font-size: 14px;
-    text-align: left;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: -18px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-div.select-box select:focus,
-div.select-box select:active {
-    outline: none;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-div.select-box select option {
-    text-align: left;
-}
-
-
-
-/* Settings */
-#settings {
-    top: 0px;
-    display: grid;
-    grid-template-columns: 30px 1fr 1fr 30px;
-    grid-template-rows: 50px 1fr 80px 80px 80px 80px 80px;
-}
-
-#settings span {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-    align-self: center;
-    justify-self: center;
-    background-color: var(--background-color);
-    padding: 10px;
-    width: 130px;
-    height: 130px;
-    border: 10px solid var(--primary-color);
-    border-radius: 999px;
-    background-image: url(./media/logo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#settings h2 {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    align-self: start;
-}
-
-#settings h2::before {
-    content: "Setup";
-    font-weight: 400;
-}
-
-#settings div.select-box:nth-of-type(1) {
-    grid-row: 4 / 4;
-}
-
-#settings div.select-box:nth-of-type(2) {
-    grid-row: 5 / 5;
-}
-
-#settings div.select-box:nth-of-type(3) {
-    grid-row: 6 / 6;
-}
-
-#settings a {
-    grid-column: 3 / 4;
-    grid-row: 7 / 7;
-    align-self: start;
-    justify-self: end;
-}
-
-
-
-
-/* Questions */
-#questions {
-    top: 100vh;
-    display: grid;
-    grid-template-columns: 30px 1fr 1fr 30px;
-    grid-template-rows: 50px 1fr auto 150px 150px 80px;
-}
-
-#questions h2 {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    align-self: start;
-    margin-bottom: 20px;
-}
-
-#questions h2::before {
-    content: "Question";
-    font-weight: 400;
-}
-
-#questions div {
-    text-align: center;
-    background-color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    color: var(--normal-text-color);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    margin: 7px;
-    width: calc(100% - 40px);
-    max-width: 150px;
-    height: 110px;
-    padding: 10px;
+#overview>div:first-of-type {
     display: flex;
-    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
 }
 
-#questions div.answered {
-    background-color: var(--primary-color);
-    color: var(--background-color);
+#overview>div:first-of-type img {
+    height: 50px;
+    width: auto;
 }
 
-#questions div.correct {
-    border-color: red;
+#overview>div:first-of-type h1 {
+    font-family: var(--title-font), var(--normal-font);
+    font-size: 40px;
+    margin: 0px 0px 0px 10px;
+    display: inline-block;
 }
-
-#questions div::before {
-    color: var(--special-text-colot);
-    font-size: 12px;
-}
-
-#questions div:hover {
-    background-color: var(--background-color);
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-#questions div:active {
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    color: var(--background-color);
-}
-
-#questions div:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 4 / 4;
-    justify-self: end;
-    align-self: end;
-}
-
-#questions div:nth-of-type(1)::before {
-    content: "A";
-}
-
-#questions div:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 4 / 4;
-    justify-self: start;
-    align-self: end;
-}
-
-#questions div:nth-of-type(2)::before {
-    content: "B";
-}
-
-#questions div:nth-of-type(3) {
-    grid-column: 2 / 3;
-    grid-row: 5 / 5;
-    justify-self: end;
-    align-self: start;
-}
-
-#questions div:nth-of-type(3)::before {
-    content: "C";
-}
-
-#questions div:nth-of-type(4) {
-    grid-column: 3 / 4;
-    grid-row: 5 / 5;
-    justify-self: start;
-    align-self: start;
-}
-
-#questions div:nth-of-type(4)::before {
-    content: "D";
-}
-
-#questions div p {
-    margin: auto;
-    text-align: center;
-}
-
-#questions a {
-    grid-column: 3 / 4;
-    grid-row: 6 / 6;
-    align-self: start;
-    justify-self: center;
-}
-
-
-/* Results */

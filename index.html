@@ -5,98 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" type="text/css">
-    <link rel="icon" type="image/png" href="./media/favicon.ico">
-    <title>Trivia</title>
+    <title>NASA Images of the Year</title>
 </head>
 
 <body>
-    <!-- TODO: article IDs kunnen miss weg? -->
-    <!-- TODO: de antwoorden moeten nog gerandomized worden voordat ze in de HTML gezet worden -->
-    <section id="settingsVP">
-        <article id="settings">
-            <h1>Setup</h1>
-
-            <span>
-                <!-- Logo is shown here (CSS background-image), span is needed for border/decoration -->
-            </span>
-
-            <h2>Setup game settings</h2>
-
-            <div class="select-box">
-                <select id="limit">
-                    <option value="10" disabled selected hidden>10</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                </select>
-            </div>
-
-            <div class="select-box">
-                <select id="category">
-                    <!-- ! sommige categorieen returnen lege arrays -->
-                    <!-- TODO add all available categories (this includes any) -->
-                    <option value="9" disabled selected hidden>General Knowledge</option>
-                    <option value="9">General knowledge</option>
-                    <option value="11">Films</option>
-                    <option value="15">Games</option>
-                    <option value="21">Sport</option>
-                    <option value="25">Art</option>
-                    <option value="26">Celebrities</option>
-                </select>
-            </div>
-
-            <div class="select-box">
-                <select id="difficulty">
-                    <option value="medium" disabled selected hidden>Medium</option>
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-            </div>
-
-            <a href="#questionsVP">Start</a>
-        </article>
-    </section>
-
-    <section id="questionsVP">
-        <article id="questions">
-            <h1>Questions</h1>
-
-            <!-- Progress -->
-
-            <!-- <h2></h2>
-
+    <main>
+        <section id="overview">
             <div>
-                <p></p>
+                <img src="./media/images/nasa_logo.png" alt="NASA logo">
+                <h1>NASA Images of the Year</h1>
             </div>
 
             <div>
-                <p></p>
+                <!-- GEBRUIK REFLOW (zie slack code voorbeeld van Robin) -->
             </div>
+        </section>
 
-            <div>
-                <p></p>
-            </div>
-
-            <div>
-                <p></p>
-            </div> -->
-
-
-            <a href="#resultsVP">Next</a>
-        </article>
-    </section>
-
-    <section id="resultsVP">
-        <article id="results">
-            <!-- scoreboard -->
-            <h1>Results</h1>
-
-
-            <a href="#settingsVP">Reset</a>
-        </article>
-    </section>
+        <section id="detail">
+            <!-- detail page -->
+            <!-- Gebruik template engine (kijk of het perse een microlibrary moet zijn) -->
+        </section>
+    </main>
 
     <script type="module" src="./script.js"></script>
     <script src="./modules/routie.js"></script>
