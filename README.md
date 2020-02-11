@@ -39,7 +39,7 @@ The user will be welcomed with a 'setup' screen, here the user can setup rules a
 * **DIFFICULTY** | allows the user to select a difficulty
 
 # Actors
-WHICH ACTORS ARE THERE IN YOUR APPLICATION? (ACTOR DIAGRAM)
+![image](https://user-images.githubusercontent.com/45405413/74222195-38439980-4cb4-11ea-9fdc-f3499ab4e58f.png)
 
 # API
 
