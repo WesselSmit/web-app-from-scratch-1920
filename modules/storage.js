@@ -10,8 +10,7 @@ export function checkStoredData() {
 
         //Get current date 
         const now = new Date()
-        // const currentDay = utils.prefixZero(now.getDate())
-        const currentDay = 9
+        const currentDay = utils.prefixZero(now.getDate())
         const currentMonth = utils.prefixZero(now.getMonth() + 1)
         const currentYear = now.getFullYear()
         const currentDate = utils.joinString('-', currentYear, currentMonth, currentDay)
