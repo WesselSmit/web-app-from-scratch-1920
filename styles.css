@@ -13,7 +13,6 @@ body {
 }
 
 main {
-    overflow-y: hidden;
     height: 100vh;
 }
 
@@ -39,4 +38,19 @@ main {
     font-size: 40px;
     margin: 0px 0px 0px 10px;
     display: inline-block;
+}
+
+#overview>div:last-of-type {
+    background-color: lightblue;
+    margin: 0px 2vw 2vw 2vw;
+    width: 96vw;
+    height: fit-content;
+}
+
+#overview>div:last-of-type img {
+    /* width: 500px;
+    height: 500px; */
+    /* width: 10%;
+    height: 10%; */
+    object-fit: cover;
 }

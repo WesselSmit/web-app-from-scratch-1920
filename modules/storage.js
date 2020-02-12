@@ -1,5 +1,6 @@
 import * as api from '../modules/api.js'
 import * as utils from '../modules/utils.js'
+import * as html from '../modules/html.js'
 
 //Check if localStorage contains data
 export function checkStoredData() {
@@ -18,16 +19,25 @@ export function checkStoredData() {
         //Check if the data in localStorage up is to date
         const equalDates = utils.compareValues(lastDataDate, currentDate)
 
-        //Fetch missing data if localStorage is not up to date
+        //Fetch missing data if localStorage is not up to dat
+        //todo  maaks de if statements verschillende functions die aangeroepen worden in een ternary
+        //todo geef GEEN data mee aan 'html.createOverview()' --> deze kan uit localStorage opgehaald worden in de 'html' module
         if (equalDates === false) {
             api.fetchData(equalDates, currentDate)
-                .then(() => console.log('data was incomplete, following data was missing: ', getStoredItem('data')))
+                .then(() => {
+                    console.log('fetched missing -->', getStoredItem('data'))
+                    html.createOverview(getStoredItem('data'))
+                })
         } else {
-            console.log('data was complete: ', getStoredItem('data'))
+            console.log('was already complete', getStoredItem('data'))
+            html.createOverview(getStoredItem('data'))
         }
     } else {
         api.fetchData(null)
-            .then(() => console.log('data was empty, fetched the following data: ', getStoredItem('data')))
+            .then(() => {
+                console.log('was empty --> ', getStoredItem('data'))
+                html.createOverview(getStoredItem('data'))
+            })
     }
 }
 
