@@ -87,4 +87,4 @@ Nasa has provided this incredible `API` & made it available for free to the publ
 
 APOD has used the NASA `API` and made a really awesome website, this website was the main inspiration behind this app.
 
-### [License](https://github.com/WesselSmit/web-app-from-scratch-1920/blob/master/LICENSE)
+# [License](https://github.com/WesselSmit/web-app-from-scratch-1920/blob/master/LICENSE)
