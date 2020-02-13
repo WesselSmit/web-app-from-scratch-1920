@@ -1,4 +1,4 @@
-//Joins miltiple strings with a '-'
+//Joins multiple strings with a special-char
 export function joinString(joinChar, ...strings) {
     return strings.join(joinChar)
 }
@@ -15,6 +15,9 @@ export function compareValues(base, ...items) {
 }
 
 //Get latest data date
+//todo '.date' moet een argument zijn in de functie die je als string dynamisch kan meegeven
+//todo functie kan je hernoemen naar 'getLastDataProperty' of 'getDataProperty' 
+//todo: (kan je het ook nog zo maken dat je als argument meegeeft welke propertie je wilt van welk data-item index)
 export function getLastDataDate(data) {
     return data[data.length - 1].date
 }

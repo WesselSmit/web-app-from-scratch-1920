@@ -1,6 +1,6 @@
 import * as api from '../modules/api.js'
 import * as utils from '../modules/utils.js'
-import * as html from '../modules/html.js'
+import * as html from './html.js'
 
 //Check if localStorage contains data
 export function checkStoredData() {
@@ -10,6 +10,8 @@ export function checkStoredData() {
         const lastDataDate = utils.getLastDataDate(result)
 
         //Get current date 
+        //todo: maak hier een util.createCurrentDate() function van
+        //todo: return in de functie utils.joinString('-', currentYear, currentMonth, currentDay)
         const now = new Date()
         const currentDay = utils.prefixZero(now.getDate())
         const currentMonth = utils.prefixZero(now.getMonth() + 1)
@@ -41,11 +43,14 @@ export function checkStoredData() {
     }
 }
 
+//todo: rename storeItem --> storeData
 //Set value in localStorage
 export function storeItem(name, item) {
     localStorage.setItem(name, JSON.stringify(item))
 }
 
+
+//todo: rename getStoredItem --> getStoredData
 //Get value from localStorage
 export function getStoredItem(item) {
     return JSON.parse(localStorage.getItem(item))
