@@ -43,7 +43,7 @@ This has 2 benefits:
 - Only `fetches` missing data 
 
 # Actors
-HIER MOET HET ACTORS DIAGRAM KOMEN
+![image](https://user-images.githubusercontent.com/45405413/74481284-b9687f80-4eb2-11ea-96db-a4b98fdd24d3.png)
 
 # API
 
