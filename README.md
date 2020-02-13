@@ -73,6 +73,8 @@ There currently is 1000 calls per hour (per `api` key).
 WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues die je hebt toegepast)
 
 # Stuff I Want To Do
+- [x] Use a router
+- [ ] Use a templating engine
 - [ ] Allow users to filter (images/videos)
 - [ ] Allow users to sort (new/old)
 - [ ] Fetch data in bulks (per month)
