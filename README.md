@@ -47,18 +47,18 @@ HIER MOET HET ACTORS DIAGRAM KOMEN
 
 # API
 
-This application uses NASA's [Picture of the Day (APOD)](https://api.nasa.gov/) API, it provides space related pictures.
+This application uses NASA's [Picture of the Day (APOD)](https://api.nasa.gov/) `API`, it provides space related pictures.
 
-Every day NASA adds a new space related picture to the API, these are retrievable individually but NASA also supports bulk fetching!
+Every day NASA adds a new space related picture to the `API`, these are retrievable individually but NASA also supports bulk fetching!
 
 Using parameters you're able to create a more personal request, the following parameters are available;
 * **date** | the date of the picture 
 * **hd** | url for high resolution picture
 * **api_key** | personal api key to identify yourself 
 
-There currently is 1000 calls per hour (per api key).
+There currently is 1000 calls per hour (per `api` key).
 
-API keys are free, you only have to [register](https://api.nasa.gov/). (full name & email)
+`API` keys are free, you only have to [register](https://api.nasa.gov/). (full name & email)
 
 # Data 
 - used data
@@ -73,9 +73,9 @@ HOW DOES THE INTERACTION FLOW THROUGH THE APPLICATION? (INTERACTION DIAGRAM)
 WELKE BEST PRACTICES HEB JE TOEGEPAST
 
 # Stuff I Want To Do
-- [] Allow users to filter (images/videos)
-- [] Allow users to sort (new/old)
-- [] Fetch data in bulks (per month)
+- [ ] Allow users to filter (images/videos)
+- [ ] Allow users to sort (new/old)
+- [ ] Fetch data in bulks (per month)
 
 # Credits
 
