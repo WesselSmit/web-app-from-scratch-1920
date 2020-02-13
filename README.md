@@ -70,7 +70,7 @@ There currently is 1000 calls per hour (per `api` key).
 HOW DOES THE INTERACTION FLOW THROUGH THE APPLICATION? (INTERACTION DIAGRAM)
 
 # Design Patterns and Best Practices
-WELKE BEST PRACTICES HEB JE TOEGEPAST
+WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues die je hebt toegepast)
 
 # Stuff I Want To Do
 - [ ] Allow users to filter (images/videos)
