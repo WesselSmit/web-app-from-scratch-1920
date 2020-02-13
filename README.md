@@ -43,7 +43,7 @@ This has 2 benefits:
 - Only `fetches` missing data 
 
 # Actors
-![image](https://user-images.githubusercontent.com/45405413/74481284-b9687f80-4eb2-11ea-96db-a4b98fdd24d3.png)
+![image](https://user-images.githubusercontent.com/45405413/74486612-a5764b00-4ebd-11ea-84d2-848da30d686d.png)
 
 # API
 
@@ -67,7 +67,7 @@ There currently is 1000 calls per hour (per `api` key).
 - empty values
 
 # Interaction
-HOW DOES THE INTERACTION FLOW THROUGH THE APPLICATION? (INTERACTION DIAGRAM)
+![image](https://user-images.githubusercontent.com/45405413/74486624-b030e000-4ebd-11ea-80d5-be96a5912162.png)
 
 # Design Patterns and Best Practices
 WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues die je hebt toegepast)
