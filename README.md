@@ -75,6 +75,7 @@ WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues
 # Stuff I Want To Do
 - [x] Use a router
 - [ ] Use a templating engine
+- [ ] Add image reflow
 - [ ] Allow users to filter (images/videos)
 - [ ] Allow users to sort (new/old)
 - [ ] Fetch data in bulks (per month)
