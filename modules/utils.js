@@ -15,14 +15,22 @@ export function compareValues(base, ...items) {
 }
 
 //Get latest data date
-//todo '.date' moet een argument zijn in de functie die je als string dynamisch kan meegeven
-//todo functie kan je hernoemen naar 'getLastDataProperty' of 'getDataProperty' 
-//todo: (kan je het ook nog zo maken dat je als argument meegeeft welke propertie je wilt van welk data-item index)
-export function getLastDataDate(data) {
-    return data[data.length - 1].date
+export function getLastDataDate(data, prop) {
+    return data[data.length - 1][prop]
 }
 
+//Create date object for 'currentYear' January 1st 
 export function createStartYearDate() {
     const year = new Date().getFullYear()
     return joinString('-', year, '01', '01')
+}
+
+//Create a YYYYMMDD obj of current date
+export function createYYYYMMDDobj() {
+    const now = new Date()
+    return {
+        currentDay: now.getDate(),
+        currentMonth: now.getMonth() + 1,
+        currentYear: now.getFullYear()
+    }
 }

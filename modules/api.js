@@ -10,14 +10,13 @@ export async function fetchData(equalDates, lastDataDate) {
     const jsonData = await response.json()
 
     //Store data in localStorage
-    //todo maak hier aparte functions van die geroepen worden met een ternary
     if (equalDates === false) { //Store localStorage data + newly fetched data
-        let incompleteData = storage.getStoredItem('data')
+        let incompleteData = storage.getStoredData('data')
         incompleteData.shift()
         let completeData = [incompleteData, jsonData].flat()
-        storage.storeItem('data', completeData)
+        storage.storeData('data', completeData)
     } else { //Store fetched data
-        storage.storeItem('data', jsonData)
+        storage.storeData('data', jsonData)
     }
     return jsonData
 }
