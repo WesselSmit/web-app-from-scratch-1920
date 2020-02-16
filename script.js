@@ -16,12 +16,6 @@ routie({
 //TODO: als het niet mogelijk is om met een template engine beide 'img' & 'video' tags aan te maken -> verwijder dan alle video's uit de data 
 
 
-//todo: maak een data-object met meerdere dingen erin, loop met mustache eroverheen (zie ook de tutorial)
-//todo: in de echte code van de NASA applicatie moet de data worden opgeschoond:
-// - beste kwaliteit URLs moeten gebruikt worden (zie documentatie)
-// - alle onnodige shit eruit
-// - id meegeven aan elk data-object-item
-
 //todo: add error handling in fetch 
 
 //todo: make something that gives 'feedback' to the users
