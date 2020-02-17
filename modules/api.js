@@ -10,7 +10,7 @@ export async function fetchData(equalDates, lastDataDate) {
     const response = await fetch(url)
     const jsonData = await response.json()
 
-    const necessaryProperties = ['date', 'hdurl', 'title', 'explanation', 'media_type']
+    const necessaryProperties = ['date', 'hdurl', 'url', 'title', 'explanation', 'media_type']
     const preparedData = data.createCompactObj(jsonData, necessaryProperties)
 
     //Store data in localStorage

@@ -7,9 +7,23 @@ export function createCompactObj(data, properties) {
             if (!properties.includes(prop)) { //If prop isn't one of the necessary properties delete it
                 delete item[prop]
             }
+            if (prop === 'media_type') {
+                addMediaTypeKey(item)
+            }
         })
     })
     return IDgenerator(data)
+}
+
+//Determine media_type & create data key/value pair in object
+export function addMediaTypeKey(item) {
+    if (item.media_type === 'image') {
+        item.image = true
+        delete item.url
+    } else {
+        item.video = true
+    }
+    return item.media_type
 }
 
 //Give each data object an unique ID

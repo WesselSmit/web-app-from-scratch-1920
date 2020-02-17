@@ -13,9 +13,8 @@ routie({
     }
 })
 
-//todo rename html module naar iets anders
 
-//TODO: als het niet mogelijk is om met een template engine beide 'img' & 'video' tags aan te maken -> verwijder dan alle video's uit de data 
+//todo: gebruik :empty state om reflow animation te maken
 
 //TODO LICENSE moet in de repo verstopt zijn (gitignore)
 
@@ -25,24 +24,3 @@ routie({
 
 //todo: maak een functie die de data sorteert (sorteer de foto's van nieuw to oud)
 //todo: maak een knop voor alleen: foto's, maak een knop voor alleen: video's
-
-
-
-
-// import * as template from './libraries/cantinflas.js';
-
-// const tmpl = `{{#name}}
-//                 Hello {{name}}!
-//             {{/name}} 
-
-//             {{^name}} 
-//                 no name found 
-//             {{/name}}`
-// const data = {
-//     name: 'Wessel'
-// };
-
-
-// document.querySelector('html').addEventListener('click', () => {
-//     document.querySelector('#overview div:last-of-type').innerHTML = template.cantinflas(tmpl, data)
-// })

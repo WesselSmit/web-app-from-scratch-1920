@@ -8,17 +8,22 @@
     --normal-font: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
 }
 
 main {
     height: 100vh;
+    overflow-y: hidden;
 }
 
 #overview {
     overflow-y: scroll;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 #overview>div:first-of-type {
@@ -26,6 +31,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: 30px 0px;
+    height: 5vh;
 }
 
 #overview>div:first-of-type img {
@@ -41,16 +47,35 @@ main {
 }
 
 #overview>div:last-of-type {
-    background-color: lightblue;
-    margin: 0px 2vw 2vw 2vw;
-    width: 96vw;
-    height: fit-content;
+    height: calc(95vh - 60px);
+    max-height: calc(95vh - 60px);
+    width: 84vw;
+    margin: 0px 8vw;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#overview>div:last-of-type span {
+    background-color: #DBDCD9;
+    width: 320px;
+    height: 320px;
+    margin: 0px 10px 20px 10px;
+    display: block;
 }
 
 #overview>div:last-of-type img {
-    /* width: 500px;
-    height: 500px; */
-    /* width: 10%;
-    height: 10%; */
-    object-fit: cover;
+    max-width: 320px;
+    margin: 0px 10px 20px 10px;
+    /* todo: er moet nog iets uitgevonden worden om alles dezelfde grootte te geven */
+    /* * miss is background-image & background-size: cover; een goede manier*/
+}
+
+
+
+#detail {
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
 }
