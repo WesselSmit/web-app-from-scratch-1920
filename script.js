@@ -13,8 +13,11 @@ routie({
     }
 })
 
+//todo rename html module naar iets anders
+
 //TODO: als het niet mogelijk is om met een template engine beide 'img' & 'video' tags aan te maken -> verwijder dan alle video's uit de data 
 
+//TODO LICENSE moet in de repo verstopt zijn (gitignore)
 
 //todo: add error handling in fetch 
 
@@ -26,20 +29,20 @@ routie({
 
 
 
-import * as template from './libraries/cantinflas.js';
+// import * as template from './libraries/cantinflas.js';
 
-const tmpl = `{{#name}}
-                Hello {{name}}!
-            {{/name}} 
+// const tmpl = `{{#name}}
+//                 Hello {{name}}!
+//             {{/name}} 
 
-            {{^name}} 
-                no name found 
-            {{/name}}`
-const data = {
-    name: 'Wessel'
-};
+//             {{^name}} 
+//                 no name found 
+//             {{/name}}`
+// const data = {
+//     name: 'Wessel'
+// };
 
 
-document.querySelector('html').addEventListener('click', () => {
-    document.querySelector('#overview div:last-of-type').innerHTML = template.cantinflas(tmpl, data)
-})
+// document.querySelector('html').addEventListener('click', () => {
+//     document.querySelector('#overview div:last-of-type').innerHTML = template.cantinflas(tmpl, data)
+// })

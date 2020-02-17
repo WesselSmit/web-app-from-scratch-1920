@@ -24,3 +24,11 @@ export function IDgenerator(data) {
     })
     return data
 }
+
+//Nest passed object as array in bigger object
+export function nestArrInObj(obj) {
+    const dataObject = {
+        APODs: obj
+    }
+    return dataObject
+}

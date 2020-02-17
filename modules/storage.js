@@ -1,6 +1,6 @@
 import * as api from '../modules/api.js'
 import * as utils from '../modules/utils.js'
-import * as html from './html.js'
+import * as template from '../modules/template.js'
 
 //Check if localStorage contains data
 export function checkStoredData() {
@@ -19,14 +19,14 @@ export function checkStoredData() {
         //Fetch missing data if localStorage is not up to date & create HTML
         if (equalDates === false) {
             api.fetchData(equalDates, currentDate)
-                .then(() => html.createOverview())
+                .then(() => template.createOverview())
         } else {
-            html.createOverview()
+            template.createOverview()
         }
     } else {
         //Fetch data from API
         api.fetchData(null)
-            .then(() => html.createOverview())
+            .then(() => template.createOverview())
     }
 }
 
