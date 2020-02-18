@@ -20,6 +20,16 @@ routie({
 })
 
 
+//TODO: videos lukken niet
+//TODO: haal in data module alle video media_types uit de data
+//TODO: heel de addMediaTypeKey() functie kan eruit en deze hoef je ook niet meer aan te roepen
+//TODO: haal in de template module de template code eruit voor iframes/videos
+//TODO: haal in CSS de code eruit voor videos/iframes
+//TODO: het nieuwe concept is dat je kan filteren op "copyright" en "non-copyright"
+
+//TODO: fix de IDs in de template engine en dat het goed scrollt naar de details page 
+//TODO -> elke foto link krijgt een uniek ID, in de routing moeten al deze unieke IDs opgevangen worden en moet een scrollIntoView naar #detail staan
+//TODO: let op: dit moet ook in routie vervangen worden (hier staat nu nog 'detail')
 
 //todo: zorg dat de images er mooi geformatteerd uitzien/de juiste dimensies hebben
 
@@ -31,4 +41,4 @@ routie({
 //todo: make something that gives 'feedback' to the users
 
 //todo: maak een functie die de data sorteert (sorteer de foto's van nieuw to oud)
-//todo: maak een knop voor alleen: foto's, maak een knop voor alleen: video's
+//todo: maak een filter functie -> knop voor copyright / non-copyright

@@ -17,7 +17,11 @@ export function createOverview() {
         {{/image}}
 
         {{#video}}
-            <p>{{id}} video {{url}}</p>
+            <a href="#detail">
+                <span>
+                    <iframe src="{{url}}&autoplay=1&cc_load_policy=0&color=white&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1"></iframe>
+                </span>
+            </a>
         {{/video}}
     {{/APODs}}`
 
@@ -27,6 +31,7 @@ export function createOverview() {
 }
 
 
-//TODO: de href van de <a> tag moet het ID worden en in de routie function word automatisch met JS gescrolld
 
-//todo: de data bevat beide images & video's; maak voor de video's een video element dat autoplayed en geen controls laat zien
+//todo: kijk of de <span> uit de template kunnen (of verpest dit het image reflow effect?)
+
+//TODO: de href van de <a> tag moet het ID worden en in de routie function word automatisch met JS gescrolld
