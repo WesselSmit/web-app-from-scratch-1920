@@ -94,12 +94,6 @@ main {
     cursor: pointer;
 }
 
-#overview>div:last-of-type span iframe {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
 /* Detail section */
 
 #detail {

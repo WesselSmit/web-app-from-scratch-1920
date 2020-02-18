@@ -7,23 +7,9 @@ export function createCompactObj(data, properties) {
             if (!properties.includes(prop)) { //If prop isn't one of the necessary properties delete it
                 delete item[prop]
             }
-            if (prop === 'media_type') {
-                addMediaTypeKey(item)
-            }
         })
     })
     return IDgenerator(data)
-}
-
-//Determine media_type & create data key/value pair in object
-export function addMediaTypeKey(item) {
-    if (item.media_type === 'image') {
-        item.image = true
-        delete item.url
-    } else {
-        item.video = true
-    }
-    return item.media_type
 }
 
 //Give each data object an unique ID
@@ -32,11 +18,17 @@ export function IDgenerator(data) {
     const startIndex = (storedData != null) ? storedData.length : 1 //Check what IDs already exist in storage data
     let index = startIndex
 
+    //Give data-item unique ID
     data.map(item => {
         item.id = index
         index++
     })
     return data
+}
+
+//Filter out all non image media_types
+export function filterDataMedia_types(data) {
+    return data.filter(item => item.media_type === 'image')
 }
 
 //Nest passed object as array in bigger object

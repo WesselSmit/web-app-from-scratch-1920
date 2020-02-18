@@ -34,3 +34,10 @@ export function createYYYYMMDDobj() {
         currentYear: now.getFullYear()
     }
 }
+
+export function scrollToElement(target) {
+    target.scrollIntoView({
+        behavior: "smooth",
+        block: "end"
+    })
+}
