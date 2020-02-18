@@ -30,7 +30,6 @@ routie({
 
 
 
-//TODO LICENSE moet in de repo verstopt zijn (gitignore)
 
 //todo: add error handling in fetch 
 
