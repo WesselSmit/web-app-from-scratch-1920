@@ -90,4 +90,16 @@ Nasa has provided this incredible `API` & made it available for free to the publ
 
 APOD has used the NASA `API` and made a really awesome website, this website was the main inspiration behind this app.
 
+### [Routie Hash Router](https://github.com/jgallen23/routie)
+
+This application uses the routie `hash router` which is a `microJS library`.
+
+### [Cantinflas Templating Engine](https://github.com/terkelg/cantinflas)
+
+This application uses the cantinflas `templating engine` which is a `microJS library`.
+
+### [Image Reflow Animation](https://codepen.io/JCLee/pen/dyPejGV?editors=0100)
+
+I used this codepen as a basis for my image reflow animation.
+
 # [License](https://github.com/WesselSmit/web-app-from-scratch-1920/blob/master/LICENSE)

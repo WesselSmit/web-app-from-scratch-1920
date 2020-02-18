@@ -8,10 +8,6 @@
     --normal-font: Arial, Helvetica, sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0px;
 }
@@ -46,33 +42,59 @@ main {
     display: inline-block;
 }
 
+/* Content section */
+
 #overview>div:last-of-type {
     height: calc(95vh - 60px);
     max-height: calc(95vh - 60px);
     width: 84vw;
-    margin: 0px 8vw;
+    padding: 0px 8vw;
     overflow-y: scroll;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#overview>div:last-of-type span {
-    background-color: #DBDCD9;
-    width: 320px;
-    height: 320px;
+/* Image reflow */
+
+#overview>div:last-of-type span,
+#overview>div:last-of-type a span {
+    background-color: #E4E5E7;
+    width: 400px;
+    height: 400px;
     margin: 0px 10px 20px 10px;
     display: block;
+    position: relative;
+    overflow: hidden;
 }
 
-#overview>div:last-of-type img {
-    max-width: 320px;
-    margin: 0px 10px 20px 10px;
-    /* todo: er moet nog iets uitgevonden worden om alles dezelfde grootte te geven */
-    /* * miss is background-image & background-size: cover; een goede manier*/
+#overview>div:last-of-type span:empty::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    transform: translateX(-100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0));
+    animation: pulse 2s infinite;
 }
 
+/* Used (https://codepen.io/JCLee/pen/dyPejGV?editors=0100) by "JCLee" as basis for this animation */
+@keyframes pulse {
+    100% {
+        transform: translateX(100%);
+    }
+}
 
+#overview>div:last-of-type span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Detail section */
 
 #detail {
     background-color: red;

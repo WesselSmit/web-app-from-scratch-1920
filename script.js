@@ -5,16 +5,24 @@ import * as storage from './modules/storage.js'
 //todo stuk code schrijven dat aantoont dat je deze methodes begrijpt wat los staat van je applicatie
 
 routie({
+    // Full credits to https://github.com/WesselSmit/web-app-from-scratch-1920 for the routie microJS library
     '': () => {
         storage.checkStoredData()
     },
-    'hiermoetietsmeteenIDkomen': () => {
-        // dit moet naar de detail page linken
+    'overview': () => {
+        storage.checkStoredData()
+    },
+    'detail': () => {
+        console.log('the user has navigated to the detail page')
+        //todo: deze moet niet 'detail' zijn maar hier moet iets als ':id' staan (zie slack joost, sjors, stefan en dergelijke voor voorbeelden)
+        //todo: vervolgens moet er in dit code block de template functie aan geroepen worden en een scrollIntoView() functie die naar #detail scrollt
     }
 })
 
 
-//todo: gebruik :empty state om reflow animation te maken
+
+//todo: zorg dat de images er mooi geformatteerd uitzien/de juiste dimensies hebben
+
 
 //TODO LICENSE moet in de repo verstopt zijn (gitignore)
 

@@ -1,3 +1,5 @@
+// Full credits to https://github.com/terkelg/cantinflas for the cantinflas microJS library
+
 const CHUNK = /[\t ]*({{([#^])+([\w\d.$@]+)}})[\s\S]*?({{\/\3}})[\t ]*\n?/g;
 const VARIABLE = /{{\s*(.+?)\s*}}/g
 
