@@ -13,11 +13,13 @@ routie({
         storage.checkStoredData()
     },
     'overview': () => {
+        const overviewPage = document.getElementById('overview')
+        utils.scrollToElement(overviewPage, 'start')
         storage.checkStoredData()
     },
     ':id': (id) => {
         const detailPage = document.getElementById('detail')
-        utils.scrollToElement(detailPage)
+        utils.scrollToElement(detailPage, 'end')
 
         console.log('load data from APOD: ', id)
     }
@@ -26,7 +28,6 @@ routie({
 
 //TODO: het nieuwe concept is dat je kan filteren op "copyright" en "non-copyright"
 
-//todo: zorg dat de images er mooi geformatteerd uitzien/de juiste dimensies hebben
 
 
 //todo: add error handling in fetch 

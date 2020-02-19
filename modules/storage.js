@@ -23,6 +23,7 @@ export function checkStoredData() {
             api.fetchData(equalDates, currentDate)
                 .then(() => template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail']))
         } else {
+            // template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail'])
             template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail'])
         }
     } else {

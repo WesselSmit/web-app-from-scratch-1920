@@ -35,9 +35,9 @@ export function createYYYYMMDDobj() {
     }
 }
 
-export function scrollToElement(target) {
+export function scrollToElement(target, position) {
     target.scrollIntoView({
         behavior: "smooth",
-        block: "end"
+        block: position
     })
 }
