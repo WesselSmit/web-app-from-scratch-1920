@@ -11,14 +11,16 @@
 * [Design-Patterns-and-Best-Practices](#design-patterns-and-best-practices)
 * [Credits](#credits)
 
-# HIER MOET EEN SCREENSHOT KOMEN
+![image](https://user-images.githubusercontent.com/45405413/74859094-accaa800-5346-11ea-8ca8-486580c1f80c.png)
+
+![image](https://user-images.githubusercontent.com/45405413/74859123-b5bb7980-5346-11ea-8fb3-609fc43d0214.png)
 
 # Assignment
 
 In this course you will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of your choice, manipulated and finally shown in the UI of the App. You will learn different ways to structure code and develope your own coding style. With the gained knowledge you will be able to build interactive prototypes, based on real data. Also you will gain a better understanding of the how API's, frameworks and libraries work.
 
 # Goal 
-The goal of my app is to show users awesome space pictures, the app also provides a brief explenation by a professional. The app is a good place to find beautiful space pictures and/or show people how fascinating our universe is! 
+The goal of my app is to show users awesome space pictures, the app also provides a brief explanation by a professional. The app is a good place to find beautiful space pictures and/or show people how fascinating our universe is! 
 
 # Install Notes
 
@@ -62,10 +64,30 @@ There currently is 1000 calls per hour (per `api` key).
 `API` keys are free, you only have to [register](https://api.nasa.gov/). (full name & email)
 
 # Data 
-- used data
-- hoe ziet de data eruit
-- data cleaning/transformation
-- empty values
+The received data from NASA's APOD `API` that I use:
+* **date** | APOD date 
+* **title** | title for the APOD
+* **hdurl** | high resolution url to image
+* **explanation** | explanation of the image by a professional
+* **copyright** | copyright owner
+
+### Data cleaning
+
+Because the data is stored in `localStorage` it's important the data is as small as possible so no unnessacary space is being wasted. In the cleaning `module` all properties that won't be used are `deleted`, the following properties are deleted:
+* service_version
+* media_type
+
+The `API` consists of images & videos, all videos are filtered out.
+
+> There aren't that many videos, approximately 15% of the APODs are of media_type **video**.
+
+All APODs are assigned an unique ID.
+
+The data contians no empty values.
+
+<details><summary>Data after cleaning & transformation</summary>
+<img src="https://user-images.githubusercontent.com/45405413/74860015-42b30280-5348-11ea-9e0b-f6a2ddb63227.png">
+</details>
 
 # Interaction
 
