@@ -8,7 +8,7 @@ import * as utils from './modules/utils.js'
 
 //Handle routing
 routie({
-    // Full credits to https://github.com/WesselSmit/web-app-from-scratch-1920 for the routie microJS library
+    //Full credits to https://github.com/WesselSmit/web-app-from-scratch-1920 for the routie microJS library
     '': () => {
         storage.checkStoredData()
     },
@@ -27,8 +27,6 @@ routie({
 //TODO: het nieuwe concept is dat je kan filteren op "copyright" en "non-copyright"
 
 //todo: zorg dat de images er mooi geformatteerd uitzien/de juiste dimensies hebben
-
-
 
 
 //todo: add error handling in fetch 

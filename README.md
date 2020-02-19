@@ -74,11 +74,12 @@ WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues
 
 # Stuff I Want To Do
 - [x] Use a router
-- [ ] Use a templating engine
-- [ ] Add image reflow
+- [x] Use a templating engine
+- [x] Add image reflow
 - [ ] Allow users to filter (images/videos)
 - [ ] Allow users to sort (new/old)
 - [ ] Fetch data in bulks (per month)
+- [ ] Separate templates from code by putting them in a JSON/text file and fetching this in JS
 
 # Credits
 

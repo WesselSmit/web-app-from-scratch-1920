@@ -5,6 +5,8 @@ import * as template from '../modules/template.js'
 //Check if localStorage contains data
 export function checkStoredData() {
     const result = getStoredData('data')
+    const overviewTarget = document.querySelector('#overview > div:last-of-type')
+    const detailTarget = document.getElementById('detail')
     if (result != null) {
         //Get most recent date in data
         const lastDataDate = utils.getLastDataDate(result, 'date')
@@ -19,14 +21,14 @@ export function checkStoredData() {
         //Fetch missing data if localStorage is not up to date & create HTML
         if (equalDates === false) {
             api.fetchData(equalDates, currentDate)
-                .then(() => template.createOverview())
+                .then(() => template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail']))
         } else {
-            template.createOverview()
+            template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail'])
         }
     } else {
         //Fetch data from API
         api.fetchData(null)
-            .then(() => template.createOverview())
+            .then(() => template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail']))
     }
 }
 
