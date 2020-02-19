@@ -22,19 +22,17 @@ const detailsTemplate = `
     <p>{{explanation}}</p>
 
     {{#copyright}}
-        <p>copyright: {{copyright}}</p>
+        <p>Copyright: {{copyright}}</p>
     {{/copyright}}
 
     {{^copyright}}
-        <p>copyright: public domain</p>
+        <p>Copyright: public domain</p>
     {{/copyright}}`
 
 //Create HTML for passed instructions ([target, templateName])
 export function createHTML(id, ...instructions) {
     //Full credits to https://github.com/terkelg/cantinflas for the cantinflas microJS library
     const dataObj = data.nestArrInObj(storage.getStoredData('data'))
-
-    console.log(id, dataObj)
 
     instructions.forEach(instruction => {
         const target = instruction[0]

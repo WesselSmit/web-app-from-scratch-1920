@@ -19,9 +19,9 @@ routie({
         storage.checkStoredData()
     },
     ':id': (id) => {
+        template.createHTML(id, [detailPage, 'detail'])
         const detailPage = document.getElementById('detail')
         utils.scrollToElement(detailPage, 'end')
-        template.createHTML(id, [detailPage, 'detail'])
     }
 })
 
