@@ -1,4 +1,5 @@
 import * as storage from './modules/storage.js'
+import * as template from './modules/template.js'
 import * as utils from './modules/utils.js'
 
 //TODO: je moet minimaal: MAP, FILTER & REDUCE gebruiken in je code (je moet laten zien dat je dit beheerst)
@@ -20,15 +21,14 @@ routie({
     ':id': (id) => {
         const detailPage = document.getElementById('detail')
         utils.scrollToElement(detailPage, 'end')
-
-        console.log('load data from APOD: ', id)
+        template.createHTML(id, [detailPage, 'detail'])
     }
 })
 
 
 //TODO: het nieuwe concept is dat je kan filteren op "copyright" en "non-copyright"
 
-
+//TODO: fix het scrollen naar #overview met https://stackoverflow.com/questions/51618548/scrollintoview-is-not-working-does-not-taking-in-account-fixed-element
 
 //todo: add error handling in fetch 
 

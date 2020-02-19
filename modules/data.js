@@ -9,13 +9,14 @@ export function createCompactObj(data, properties) {
             }
         })
     })
+    data = filterDataMedia_types(data)
     return IDgenerator(data)
 }
 
 //Give each data object an unique ID
 export function IDgenerator(data) {
     const storedData = storage.getStoredData('data')
-    const startIndex = (storedData != null) ? storedData.length : 1 //Check what IDs already exist in storage data
+    const startIndex = (storedData != null) ? storedData.length : 0 //Check what IDs already exist in storage data
     let index = startIndex
 
     //Give data-item unique ID

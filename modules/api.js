@@ -14,16 +14,15 @@ export async function fetchData(equalDates, lastDataDate) {
     //Clean/filter up data
     const necessaryProperties = ['date', 'hdurl', 'title', 'explanation', 'copyright', 'media_type']
     const preparedData = data.createCompactObj(jsonData, necessaryProperties)
-    const filteredData = data.filterDataMedia_types(preparedData)
 
     //Store data in localStorage
     if (equalDates === false) { //Store localStorage data + newly fetched data
         let incompleteData = storage.getStoredData('data')
         incompleteData.shift()
-        let completeData = [incompleteData, filteredData].flat()
+        let completeData = [incompleteData, preparedData].flat()
         storage.storeData('data', completeData)
     } else { //Store fetched data
-        storage.storeData('data', filteredData)
+        storage.storeData('data', preparedData)
     }
     return jsonData
 }

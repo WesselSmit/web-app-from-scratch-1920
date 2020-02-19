@@ -19,7 +19,7 @@ p {
 
 main {
     height: 100vh;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 #overview {
@@ -73,7 +73,7 @@ main {
     overflow: hidden;
 }
 
-#overview>div:last-of-type span::after {
+#overview>div:last-of-type span:empty::after {
     content: '';
     position: absolute;
     top: 0px;
@@ -114,7 +114,6 @@ main {
     width: calc(100vw - 100px);
     padding: 50px;
     display: grid;
-    /* grid-template-columns: 1fr 650px; */
     grid-template-columns: auto 650px;
     grid-column-gap: 50px;
     grid-template-rows: auto auto auto auto auto 1fr;
@@ -144,7 +143,6 @@ main {
 #detail>h1 {
     grid-column: 2 / 3;
     grid-row: 1 / 1;
-    /* width: calc(100% - 50px); */
     align-self: end;
     font-size: 50px;
     margin-bottom: 10px;
@@ -173,30 +171,4 @@ main {
 #detail>p:nth-of-type(3) {
     grid-row: 5 / 5;
     margin-bottom: 20px;
-}
-
-#detail>div {
-    grid-column: 2 / 3;
-    grid-row: -1 / -1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#detail>div>a,
-#detail>div>a:visited,
-#detail>div>a:active {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-#detail>div>a:first-of-type img {
-    transform: rotate(270deg);
-    margin-left: 13px;
-}
-
-#detail>div>a:last-of-type img {
-    transform: rotate(90deg);
-    margin-right: 13px;
 }

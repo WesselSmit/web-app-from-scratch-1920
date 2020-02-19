@@ -21,15 +21,15 @@ export function checkStoredData() {
         //Fetch missing data if localStorage is not up to date & create HTML
         if (equalDates === false) {
             api.fetchData(equalDates, currentDate)
-                .then(() => template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail']))
+                .then(() => template.createHTML(null, [overviewTarget, 'overview'], [detailTarget, 'detail']))
         } else {
             // template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail'])
-            template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail'])
+            template.createHTML(null, [overviewTarget, 'overview'], [detailTarget, 'detail'])
         }
     } else {
         //Fetch data from API
         api.fetchData(null)
-            .then(() => template.createHTML([overviewTarget, 'overview'], [detailTarget, 'detail']))
+            .then(() => template.createHTML(null, [overviewTarget, 'overview'], [detailTarget, 'detail']))
     }
 }
 
