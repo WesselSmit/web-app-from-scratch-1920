@@ -11,6 +11,10 @@
     --placeholder-color: #E4E5E7;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 h1,
 p {
@@ -50,10 +54,10 @@ main {
 /* Content section */
 
 #overview>div:last-of-type {
-    height: calc(95vh - 60px);
-    max-height: calc(95vh - 60px);
+    height: calc(95vh - 110px);
+    max-height: calc(95vh - 110px);
     width: 84vw;
-    padding: 0px 8vw;
+    padding: 0px 8vw 50px 8vw;
     overflow-y: scroll;
     display: flex;
     justify-content: center;
@@ -62,8 +66,8 @@ main {
 
 /* Image reflow */
 
-#overview>div:last-of-type span,
-#overview>div:last-of-type a span {
+#overview>div:last-of-type>span,
+#overview>div:last-of-type a>span {
     background-color: var(--placeholder-color);
     width: 320px;
     height: 320px;
@@ -73,7 +77,7 @@ main {
     overflow: hidden;
 }
 
-#overview>div:last-of-type span:empty::after {
+#overview>div:last-of-type>span:empty::after {
     content: '';
     position: absolute;
     top: 0px;
@@ -93,6 +97,73 @@ main {
     }
 }
 
+/* Loading animation */
+
+#overview>div:last-of-type>div:first-of-type {
+    background-color: var(--primary-color);
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+    border-radius: 9999px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 0 0 10px black;
+}
+
+#overview>div:last-of-type .loadingAnim::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: calc(-50vw + 75px);
+    top: calc(-50vh + 75px);
+    z-index: 9;
+    pointer-events: none;
+}
+
+#overview>div:last-of-type>div:first-of-type>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    text-align: center;
+    font-family: var(--normal-font);
+}
+
+#overview>div:last-of-type>div:first-of-type>div {
+    height: 130px;
+    width: 130px;
+    border: 6px solid var(--highlight-color);
+    border-bottom-color: transparent;
+    border-radius: 9999px;
+    animation: 1000ms loadAnim linear infinite;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+}
+
+/* Used (https://codepen.io/vank0/pen/mARwLg?editors=1100) by vank0 as basis for this animation*/
+@keyframes loadAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Content */
+
 #overview>div:last-of-type span img {
     width: 100%;
     height: 100%;
@@ -102,8 +173,13 @@ main {
     z-index: 3;
 }
 
-#overview>div:last-of-type span:hover {
-    outline: 10px solid var(--hightlight-color);
+#overview>div:last-of-type a:hover span {
+    outline: 10px solid var(--highlight-color);
+    pointer-events: auto;
+}
+
+#overview>div:last-of-type a span img {
+    pointer-events: auto;
 }
 
 /* Detail section */

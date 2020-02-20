@@ -4,15 +4,15 @@ import * as templateEngine from '../libraries/cantinflas.js';
 
 //Declare the templates 
 const overviewTemplate = `
-{{#APODs}}
-    {{#hdurl}}
-        <a href="#{{id}}">
-            <span>
-                <img src="{{hdurl}}" title="{{title}}" alt="NASA Astronomy Picture">
-            </span>        
-        </a>
-    {{/hdurl}}
-{{/APODs}}`
+    {{#APODs}}
+        {{#hdurl}}
+            <a href="#{{id}}">
+                <span>
+                    <img src="{{hdurl}}" title="{{title}}" alt="NASA Astronomy Picture">
+                </span>        
+            </a>
+        {{/hdurl}}
+    {{/APODs}}`
 
 const detailsTemplate = `
     <img src="{{hdurl}}" id={{id}} title="{{title}}" alt="NASA Astronomy Picture"> 

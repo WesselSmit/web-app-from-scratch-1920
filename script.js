@@ -19,16 +19,14 @@ routie({
         storage.checkStoredData()
     },
     ':id': (id) => {
-        template.createHTML(id, [detailPage, 'detail'])
         const detailPage = document.getElementById('detail')
+        template.createHTML(id, [detailPage, 'detail'])
         utils.scrollToElement(detailPage, 'end')
     }
 })
 
 
 //TODO: het nieuwe concept is dat je kan filteren op "copyright" en "non-copyright"
-
-//TODO: fix het scrollen naar #overview met https://stackoverflow.com/questions/51618548/scrollintoview-is-not-working-does-not-taking-in-account-fixed-element
 
 //todo: add error handling in fetch 
 

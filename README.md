@@ -104,6 +104,7 @@ WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues
 - [ ] Allow users to sort (new/old)
 - [ ] Fetch data in bulks (per month)
 - [ ] Separate templates from code by putting them in a JSON/text file and fetching this in JS
+- [ ] Create a better "content management" function that only inserts content instead of content and HTML
 
 # Credits
 
@@ -126,5 +127,9 @@ This application uses the cantinflas `templating engine` which is a `microJS lib
 ### [Image Reflow Animation](https://codepen.io/JCLee/pen/dyPejGV?editors=0100)
 
 I used this codepen as a basis for my image reflow animation.
+
+### [Loading Animation](https://codepen.io/vank0/pen/mARwLg?editors=1100)
+
+I used this codepen as a basis for the "loading" animation.
 
 # [License](https://github.com/WesselSmit/web-app-from-scratch-1920/blob/master/LICENSE)
