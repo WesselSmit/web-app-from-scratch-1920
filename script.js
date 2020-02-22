@@ -22,6 +22,7 @@ routie({
         const detailPage = document.getElementById('detail')
         template.createHTML(id, [detailPage, 'detail'])
         utils.scrollToElement(detailPage, 'end')
+        document.querySelector('.loadingAnim').classList.add('hide')
     }
 })
 
