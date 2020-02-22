@@ -76,6 +76,10 @@ main {
     cursor: pointer;
 }
 
+#filters p.activeFilter {
+    border-bottom: 4px solid var(--highlight-color);
+}
+
 /* Content section */
 /* TODO: pas de (max-)height aan zodat het niet meer scrollbaar is met de nieuwe filter content er tussen */
 #overview>div:last-of-type {
@@ -277,4 +281,9 @@ main {
 /* Styling classes */
 .hide {
     display: none;
+}
+
+.filtered {
+    position: absolute;
+    left: -9999px;
 }

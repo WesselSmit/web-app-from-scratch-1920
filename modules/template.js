@@ -6,7 +6,7 @@ import * as templateEngine from '../libraries/cantinflas.js';
 const overviewTemplate = `
     {{#APODs}}
         {{#hdurl}}
-            <a href="#{{id}}">
+            <a href="#{{id}}" copyright="{{copyright}}">
                 <span>
                     <img src="{{hdurl}}" title="{{title}}" alt="NASA Astronomy Picture">
                 </span>        

@@ -22,6 +22,13 @@ routie({
 })
 
 
+const filters = document.querySelectorAll('#filters p:not(:first-of-type)')
+filters.forEach(target => target.addEventListener('click', () => utils.filterContent(target, filters)))
+
+
+
+
+
 
 //todo: maak een functie die de data sorteert (sorteer de foto's van nieuw to oud)
 //todo: maak een filter functie -> knop voor copyright / non-copyright

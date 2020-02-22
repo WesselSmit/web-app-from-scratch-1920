@@ -42,3 +42,24 @@ export function scrollToElement(target, position) {
         block: position
     })
 }
+
+//Filter data based on passed filter
+export function filterContent(target, filters) {
+    const filter = target.id
+    const allAPODs = document.querySelectorAll('[copyright]')
+    const copyright = document.querySelectorAll('[copyright]:not([copyright="public domain"])')
+    const non_copyright = document.querySelectorAll('[copyright="public domain"]')
+
+    //Fix active filter styling
+    filters.forEach(item => item.classList.remove('activeFilter'))
+    target.classList.toggle('activeFilter')
+
+    //Reset filters
+    allAPODs.forEach(APOD => APOD.classList.remove('filtered'))
+
+    if (filter != 'copyright') {
+        copyright.forEach(el => el.classList.add('filtered'))
+    } else {
+        non_copyright.forEach(el => el.classList.add('filtered'))
+    }
+}
