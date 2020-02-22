@@ -26,11 +26,5 @@ routie({
 })
 
 
-//TODO: het nieuwe concept is dat je kan filteren op "copyright" en "non-copyright"
-
-//todo: add error handling in fetch 
-
-//todo: make something that gives 'feedback' to the users
-
 //todo: maak een functie die de data sorteert (sorteer de foto's van nieuw to oud)
 //todo: maak een filter functie -> knop voor copyright / non-copyright

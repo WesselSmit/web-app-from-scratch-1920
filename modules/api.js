@@ -8,8 +8,15 @@ export async function fetchData(equalDates, lastDataDate) {
     const startDate = (equalDates === false) ? lastDataDate : utils.createStartYearDate() //Determine how much data has to be loaded
     const api_key = "OC0EStJnYMjAhVtZl88wJjWA75lDZflYUzVmBaJ5"
     const url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}&start_date=${startDate}`
-    const response = await fetch(url)
-    const jsonData = await response.json()
+    const jsonData = await fetch(url)
+        .then(res => {
+            if (res.ok && res.status === 200 && res.statusText === "OK") {
+                return res
+            }
+            throw "Couldn't fetch data, fetch call failed"
+        })
+        .then(response => response.json())
+        .catch(err => console.error(err))
 
     //Clean/filter up data
     const necessaryProperties = ['date', 'hdurl', 'title', 'explanation', 'copyright', 'media_type']

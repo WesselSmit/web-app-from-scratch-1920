@@ -12,6 +12,10 @@ const overviewTemplate = `
                 </span>        
             </a>
         {{/hdurl}}
+    {{/APODs}}
+    
+    {{^APODs}}
+        <p>Loading the data has failed, please refresh the page to retry.</p>
     {{/APODs}}`
 
 const detailsTemplate = `
@@ -46,5 +50,3 @@ export function createHTML(id, ...instructions) {
         }
     })
 }
-
-//TODO: add a error state ({{^APODs}})
