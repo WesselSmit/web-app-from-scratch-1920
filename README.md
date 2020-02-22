@@ -11,7 +11,7 @@
 * [Design-Patterns-and-Best-Practices](#design-patterns-and-best-practices)
 * [Credits](#credits)
 
-![image](https://user-images.githubusercontent.com/45405413/74859094-accaa800-5346-11ea-8ca8-486580c1f80c.png)
+![image](https://user-images.githubusercontent.com/45405413/75095034-26ee6d00-5591-11ea-8863-bd7ec94f7b2a.png)
 
 ![image](https://user-images.githubusercontent.com/45405413/74859123-b5bb7980-5346-11ea-8fb3-609fc43d0214.png)
 
