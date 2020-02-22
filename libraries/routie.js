@@ -1,4 +1,4 @@
-// Full credits to https://github.com/WesselSmit/web-app-from-scratch-1920 for the routie microJS library
+// Full credits to https://github.com/jgallen23/routie for the routie microJS library
 
 var Routie = function (w, isModule) {
 

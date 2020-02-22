@@ -10,6 +10,7 @@ export async function fetchData(equalDates, lastDataDate) {
     const url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}&start_date=${startDate}`
     const jsonData = await fetch(url)
         .then(res => {
+            //Check if call was succesful
             if (res.ok && res.status === 200 && res.statusText === "OK") {
                 return res
             }

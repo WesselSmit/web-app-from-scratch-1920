@@ -26,6 +26,8 @@ main {
     overflow-y: hidden;
 }
 
+/* Overview section */
+
 #overview {
     overflow-y: scroll;
     height: 100vh;
@@ -35,7 +37,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0px;
+    margin: 30px 0px 0px 0px;
     height: 5vh;
 }
 
@@ -49,13 +51,36 @@ main {
     font-size: 40px;
     margin: 0px 0px 0px 10px;
     display: inline-block;
+    cursor: default;
+}
+
+/* User actions */
+
+#filters {
+    font-family: var(--normal-font);
+    width: fit-content;
+    margin: 10px auto 20px auto;
+    height: 20px;
+}
+
+#filters p {
+    display: inline-block;
+    cursor: default;
+}
+
+#filters p:last-of-type {
+    margin-left: 10px;
+}
+
+#filters p:not(:first-of-type) {
+    cursor: pointer;
 }
 
 /* Content section */
-
+/* TODO: pas de (max-)height aan zodat het niet meer scrollbaar is met de nieuwe filter content er tussen */
 #overview>div:last-of-type {
-    height: calc(95vh - 110px);
-    max-height: calc(95vh - 110px);
+    height: calc(95vh - 60px);
+    max-height: calc(95vh - 60px);
     width: 84vw;
     padding: 0px 8vw 50px 8vw;
     overflow-y: scroll;
@@ -249,6 +274,7 @@ main {
     margin-bottom: 20px;
 }
 
+/* Styling classes */
 .hide {
     display: none;
 }

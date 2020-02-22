@@ -49,4 +49,16 @@ export function createHTML(id, ...instructions) {
             target.innerHTML = templateEngine.cantinflas(template, dataObj)
         }
     })
+
+    updateFilterOptions()
+}
+
+//Update the filter section in the HTML
+export function updateFilterOptions() {
+    const APODdata = storage.getStoredData('data')
+    const numberOfAPODs = APODdata.length
+    const public_domain_APODs = data.countObjValueNum(APODdata)
+
+    document.querySelector('#filters > p:nth-of-type(2) span').textContent = (numberOfAPODs - public_domain_APODs)
+    document.querySelector('#filters > p:last-of-type span').textContent = public_domain_APODs
 }
