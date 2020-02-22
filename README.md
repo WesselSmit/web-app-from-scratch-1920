@@ -10,6 +10,7 @@
 * [Interaction](#interaction)
 * [Design-Patterns-and-Best-Practices](#design-patterns-and-best-practices)
 * [Credits](#credits)
+* [License](#license)
 
 ![image](https://user-images.githubusercontent.com/45405413/74859094-accaa800-5346-11ea-8ca8-486580c1f80c.png)
 
@@ -44,7 +45,18 @@ This has 2 benefits:
 - Reduces the number of `API` calls
 - Only `fetches` missing data 
 
+### Copyright Filter
+
+This application allows the user to filter the pictures by copyright. The available filter options are:
+- **copyright** | show only the copyrighted pictures
+- **non-copyright** | show only the non-copyright pictures (public domain owns theses pictures)
+- **all** | show all pictures
+
+This features helps users find usable pictures for their own work/projects.
+
 # Actors
+
+# TODO UPDATE HET ACTORS DIAGRAM
 
 ![image](https://user-images.githubusercontent.com/45405413/74486612-a5764b00-4ebd-11ea-84d2-848da30d686d.png)
 
@@ -83,7 +95,7 @@ The `API` consists of images & videos, all videos are filtered out.
 
 All APODs are assigned an unique ID.
 
-The data contians no empty values.
+The data contains no empty values, but data objects only contain the `copyright` key if they are copyrighted. In the code all data objects without the `copyright` key are assigned the `copyright: public domain` key/value pair.
 
 <details><summary>Data after cleaning & transformation</summary>
 <img src="https://user-images.githubusercontent.com/45405413/74860015-42b30280-5348-11ea-9e0b-f6a2ddb63227.png">
@@ -91,10 +103,22 @@ The data contians no empty values.
 
 # Interaction
 
+# TODO UPDATE HET INTERACTION DIAGRAM
+
 ![image](https://user-images.githubusercontent.com/45405413/74486624-b030e000-4ebd-11ea-80d5-be96a5912162.png)
 
-# Design Patterns and Best Practices
-WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues die je hebt toegepast)
+# Best Practices
+* Code should be easily readable
+* Only use shorthands if you really understand how they work
+* Stick to a code style you understand and can apply consistently
+* Add comments
+* Use descriptive `variable`-/`function` names
+* Only abbreviate words when instantly understandable
+* Commit early and often
+* Save JS selectors as variables (`const button = document.querySelector('button')`)
+* Group code/logic based on functionality in `modules` 
+* Name `modules` after `objects` & name `functions` after `actions`
+* Try to avoid using `global` `variables` 
 
 # Stuff I Want To Do
 - [x] Use a router

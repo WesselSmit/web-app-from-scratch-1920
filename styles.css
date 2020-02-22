@@ -82,10 +82,10 @@ main {
 }
 
 /* Content section */
-/* TODO: pas de (max-)height aan zodat het niet meer scrollbaar is met de nieuwe filter content er tussen */
+
 #overview>div:last-of-type {
-    height: calc(95vh - 60px);
-    max-height: calc(95vh - 60px);
+    height: calc(95vh - 130px);
+    max-height: calc(95vh - 130px);
     width: 84vw;
     padding: 0px 8vw 50px 8vw;
     overflow-y: scroll;
