@@ -57,9 +57,12 @@ export function filterContent(target, filters) {
     //Reset filters
     allAPODs.forEach(APOD => APOD.classList.remove('filtered'))
 
-    if (filter != 'copyright') {
+    //Filter content
+    if (filter === 'non_copyright') {
         copyright.forEach(el => el.classList.add('filtered'))
-    } else {
+    } else if (filter === 'copyright') {
         non_copyright.forEach(el => el.classList.add('filtered'))
+    } else if (filter === 'none') {
+        allAPODs.forEach(el => el.classList.remove('filtered'))
     }
 }

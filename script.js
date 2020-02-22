@@ -27,8 +27,4 @@ filters.forEach(target => target.addEventListener('click', () => utils.filterCon
 
 
 
-
-
-
 //todo: maak een functie die de data sorteert (sorteer de foto's van nieuw to oud)
-//todo: maak een filter functie -> knop voor copyright / non-copyright

@@ -68,6 +68,7 @@ main {
     cursor: default;
 }
 
+#filters p:nth-of-type(3),
 #filters p:last-of-type {
     margin-left: 10px;
 }

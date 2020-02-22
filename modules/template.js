@@ -60,5 +60,6 @@ export function updateFilterOptions() {
     const public_domain_APODs = data.countObjValueNum(APODdata)
 
     document.querySelector('#filters > p:nth-of-type(2) span').textContent = (numberOfAPODs - public_domain_APODs)
-    document.querySelector('#filters > p:last-of-type span').textContent = public_domain_APODs
+    document.querySelector('#filters > p:nth-of-type(3) span').textContent = public_domain_APODs
+    document.querySelector('#filters > p:nth-of-type(4) span').textContent = numberOfAPODs
 }
