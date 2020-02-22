@@ -33,7 +33,7 @@ const detailsTemplate = `
         <p>Copyright: public domain</p>
     {{/copyright}}`
 
-//Create HTML for passed instructions ([target, templateName])
+//Create HTML for passed arguments (id, [target, templateName])
 export function createHTML(id, ...instructions) {
     //Full credits to https://github.com/terkelg/cantinflas for the cantinflas microJS library
     const dataObj = data.nestArrInObj(storage.getStoredData('data'))

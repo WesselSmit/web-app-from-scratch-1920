@@ -1,5 +1,6 @@
 import * as storage from './modules/storage.js'
 import * as template from './modules/template.js'
+import * as data from './modules/data.js'
 import * as utils from './modules/utils.js'
 
 //Handle routing
@@ -23,7 +24,7 @@ routie({
 
 
 const filters = document.querySelectorAll('#filters p:not(:first-of-type)')
-filters.forEach(target => target.addEventListener('click', () => utils.filterContent(target, filters)))
+filters.forEach(target => target.addEventListener('click', () => data.filterContent(target, filters)))
 
 
 

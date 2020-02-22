@@ -100,7 +100,7 @@ WELKE BEST PRACTICES HEB JE TOEGEPAST (zie ook de betere practices uit de issues
 - [x] Use a router
 - [x] Use a templating engine
 - [x] Add image reflow
-- [ ] Allow users to filter (copyright/public domain)
+- [x] Allow users to filter (copyright/public domain)
 - [ ] Allow users to sort (new/old)
 - [ ] Fetch data in bulks (per month)
 - [ ] Separate templates from code by putting them in a JSON/text file and fetching this in JS
