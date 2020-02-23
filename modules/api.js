@@ -26,7 +26,7 @@ export async function fetchData(equalDates, lastDataDate) {
     //Store data in localStorage
     if (equalDates === false) { //Store localStorage data + newly fetched data
         let incompleteData = storage.getStoredData('data')
-        incompleteData.shift()
+        // incompleteData.shift()
         let completeData = [incompleteData, preparedData].flat()
         storage.storeData('data', completeData)
     } else { //Store fetched data

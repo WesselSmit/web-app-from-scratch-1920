@@ -47,6 +47,11 @@ export function createHTML(id, ...instructions) {
             target.innerHTML = templateEngine.cantinflas(template, dataObj.APODs[ID])
         } else {
             target.innerHTML = templateEngine.cantinflas(template, dataObj)
+
+            //Reset filters
+            const filters = document.querySelectorAll('#filters p:not(:first-of-type)')
+            filters.forEach(filter => filter.classList.remove('activeFilter'))
+            document.getElementById('none').classList.add('activeFilter')
         }
     })
 

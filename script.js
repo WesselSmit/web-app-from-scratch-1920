@@ -3,6 +3,10 @@ import * as template from './modules/template.js'
 import * as data from './modules/data.js'
 import * as utils from './modules/utils.js'
 
+//Handle filter functions/events
+const filters = document.querySelectorAll('#filters p:not(:first-of-type)')
+filters.forEach(target => target.addEventListener('click', () => data.filterContent(target, filters)))
+
 //Handle routing
 routie({
     //Full credits to https://github.com/jgallen23/routie for the routie microJS library
@@ -22,9 +26,6 @@ routie({
     }
 })
 
-//Handle filter functions/events
-const filters = document.querySelectorAll('#filters p:not(:first-of-type)')
-filters.forEach(target => target.addEventListener('click', () => data.filterContent(target, filters)))
 
 
 
