@@ -7,6 +7,9 @@ import * as utils from './modules/utils.js'
 const filters = document.querySelectorAll('#filters p:not(:first-of-type)')
 filters.forEach(target => target.addEventListener('click', () => data.filterContent(target, filters)))
 
+const sortButtons = document.querySelectorAll('#sort p:not(:first-of-type)')
+sortButtons.forEach(target => target.addEventListener('click', () => data.sortContent(target, sortButtons)))
+
 //Handle routing
 routie({
     //Full credits to https://github.com/jgallen23/routie for the routie microJS library
@@ -20,7 +23,7 @@ routie({
     },
     ':id': (id) => {
         const detailPage = document.getElementById('detail')
-        template.createHTML(id, [detailPage, 'detail'])
+        template.createHTML(id, null, [detailPage, 'detail'])
         utils.scrollToElement(detailPage, 'end')
         document.querySelector('.loadingAnim').classList.add('hide')
     }

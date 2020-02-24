@@ -35,9 +35,9 @@ const detailsTemplate = `
     {{/copyright}}`
 
 //Create HTML for passed arguments (id, [target, templateName])
-export function createHTML(id, ...instructions) {
+export function createHTML(id, passedData, ...instructions) {
     //Full credits to https://github.com/terkelg/cantinflas for the cantinflas microJS library
-    const dataObj = data.nestArrInObj(storage.getStoredData('data'))
+    const dataObj = (passedData != null) ? data.nestArrInObj(passedData) : data.nestArrInObj(storage.getStoredData('data'))
 
     instructions.forEach(instruction => {
         const target = instruction[0]

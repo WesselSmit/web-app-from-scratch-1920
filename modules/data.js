@@ -1,4 +1,5 @@
 import * as storage from '../modules/storage.js'
+import * as template from '../modules/template.js'
 
 //Create compact data object with only the necessary properties
 export function createCompactObj(data, properties) {
@@ -74,4 +75,24 @@ export function filterContent(target, filters) {
     } else if (filter === 'none') {
         allAPODs.forEach(el => el.classList.remove('filtered'))
     }
+}
+
+//Sort the overview page content
+export function sortContent(target, sorters) {
+    const data = storage.getStoredData('data')
+    const sort = target.id
+    const overviewTarget = document.querySelector('#overview > div:last-of-type')
+
+    //Fix active filter styling
+    sorters.forEach(item => item.classList.remove('activeSort'))
+    target.classList.toggle('activeSort')
+
+    let sortedData
+    if (sort === 'new_first') {
+        sortedData = data.sort((lowest, highest) => highest.id - lowest.id)
+    } else {
+        sortedData = data.sort((lowest, highest) => lowest.id - highest.id)
+    }
+
+    template.createHTML(null, sortedData, [overviewTarget, 'overview'])
 }
