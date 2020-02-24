@@ -30,8 +30,3 @@ routie({
         document.querySelector('.loadingAnim').classList.add('hide')
     }
 })
-
-
-
-
-//todo: maak een functie die de data sorteert (sorteer de foto's van nieuw to oud)
