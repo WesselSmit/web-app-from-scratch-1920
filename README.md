@@ -72,9 +72,7 @@ This features helps users find usable pictures for their own work/projects.
 
 # Actors
 
-# TODO UPDATE HET ACTORS DIAGRAM
-
-![image](https://user-images.githubusercontent.com/45405413/74486612-a5764b00-4ebd-11ea-84d2-848da30d686d.png)
+![image](https://user-images.githubusercontent.com/45405413/75198040-fad51680-575f-11ea-8eba-359fa0583032.png)
 
 # API
 
@@ -141,7 +139,7 @@ The data contains no empty values, but data objects only contain the `copyright`
 - [x] Use a templating engine
 - [x] Add image reflow
 - [x] Allow users to filter (copyright/public domain)
-- [ ] Allow users to sort (new/old)
+- [x] Allow users to sort (new/old)
 - [ ] Fetch data in bulks (per month)
 - [ ] Separate templates from code by putting them in a JSON/text file and fetching this in JS
 - [ ] Create a better "content management" function that only inserts content instead of content and HTML
