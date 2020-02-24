@@ -90,7 +90,7 @@ main {
 
 #filters p:nth-of-type(3),
 #filters p:last-of-type,
-#sort p:not(:first-of-type) {
+#sort p:last-of-type {
     margin-left: 10px;
 }
 
