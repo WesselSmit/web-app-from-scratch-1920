@@ -20,6 +20,8 @@ routie({
         const overviewPage = document.getElementById('overview')
         utils.scrollToElement(overviewPage, 'start')
         storage.checkStoredData()
+        document.getElementById('new_first').classList.remove('activeSort')
+        document.getElementById('old_first').classList.add('activeSort')
     },
     ':id': (id) => {
         const detailPage = document.getElementById('detail')
