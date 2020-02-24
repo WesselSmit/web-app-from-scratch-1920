@@ -9,6 +9,7 @@ const overviewTemplate = `
             <a href="#{{id}}" copyright="{{copyright}}">
                 <span>
                     <img src="{{hdurl}}" title="{{title}}" alt="NASA Astronomy Picture">
+                    <p>{{date}}</p>
                 </span>        
             </a>
         {{/hdurl}}

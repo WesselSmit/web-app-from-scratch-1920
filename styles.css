@@ -56,28 +56,51 @@ main {
 
 /* User actions */
 
-#filters {
-    font-family: var(--normal-font);
+#actions {
+    margin: 0px auto;
     width: fit-content;
-    margin: 10px auto 20px auto;
-    height: 20px;
 }
 
-#filters p {
+#filters,
+#sort {
+    font-family: var(--normal-font);
+    width: fit-content;
+    height: 20px;
+    display: inline-block;
+}
+
+#filters {
+    margin: 10px 50px 20px 0px;
+}
+
+#sort {
+    margin: 10px 0px 20px 50px;
+}
+
+#filters p,
+#sort p {
     display: inline-block;
     cursor: default;
 }
 
+#filters p:first-of-type,
+#sort p:first-of-type {
+    font-weight: 600;
+}
+
 #filters p:nth-of-type(3),
-#filters p:last-of-type {
+#filters p:last-of-type,
+#sort p:not(:first-of-type) {
     margin-left: 10px;
 }
 
-#filters p:not(:first-of-type) {
+#filters p:not(:first-of-type),
+#sort p:not(:first-of-type) {
     cursor: pointer;
 }
 
-#filters p.activeFilter {
+#filters p.activeFilter,
+#sort p.activeSort {
     border-bottom: 4px solid var(--highlight-color);
 }
 
@@ -193,6 +216,15 @@ main {
 }
 
 /* Content */
+
+#overview>div:last-of-type span p {
+    position: absolute;
+    z-index: 999;
+    bottom: 0px;
+    right: 0px;
+    font-family: "NASA", var(--normal-font);
+    color: white;
+}
 
 #overview>div:last-of-type span img {
     width: 100%;

@@ -33,6 +33,10 @@ Run the application with a code editor or host the source code with a service li
 
 # Features
 
+### Skeleton Screen/UI
+
+This applications `fetches` needs to load data to be useable. When this data is being fetched/loaded the application isn't usable. In this state the user is presented with a so called 'skeleton screen' or 'skeleton UI'. Meaning the UI visually hints/implies it's loading and the user has to wait. This helps the user understand what's happening and enhances the user experience. 
+
 ### Data Efficiency
 
 This application retrieves many high resolution images, because these images do not change, they are not retrieved every time. The retrieved data is stored in `localStorage`. The next time the application is started, the application will look in the `localStorage`. There are 3 possible situations:
@@ -44,6 +48,18 @@ This application retrieves many high resolution images, because these images do 
 This has 2 benefits:
 - Reduces the number of `API` calls
 - Only `fetches` missing data 
+
+### Data Saving
+
+Not everything from the data that the `API` returns is important, all unnecessary data object keys are deleted. This means the application uses a more compact data object which enhances the performance, also resulting in a smaller localStorage dataset.
+
+### Image Reflow
+
+When the data is loaded and the content needs to be inserted into the `DOM` there arise some problems; 'image reflow' happens. `image reflow` is when content isn't immediately loaded/rendered and the user can see the content moving/shifting. This is because the browser renders immediately on a page load with all content that's available. Later when the slower content (images) is loaded the browser updates through re-rendering some parts. This results in content being inserted later in the `DOM` which means the user can see the content existing shifting to make room for the newly inserted content.
+
+To prevent the content from shifting I've used `<span>` elements, these function as placeholders for the images, meaning the user can see the (animated) `<span>` elements when the data-intensive images are being loaded/rendered. When the images are rendered they are placed in exactly the same position as the `<span>` elements. 
+
+>The `<span>` elements are animated in the `:empty` state; meaning they won't be infinitely looping animations while the user can see the pictures.
 
 ### Copyright Filter
 
@@ -73,7 +89,7 @@ Using parameters you're able to create a more personal request, the following pa
 
 There currently is 1000 calls per hour (per `api` key).
 
-`API` keys are free, you only have to [register](https://api.nasa.gov/). (full name & email)
+`API` keys are free, you only have to [register](https://api.nasa.gov/) (full name & email).
 
 # Data 
 The received data from NASA's APOD `API` that I use:
