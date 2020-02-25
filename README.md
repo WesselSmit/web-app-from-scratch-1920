@@ -1,5 +1,5 @@
 # Table of Contents
-* [DEMO](https://wesselsmit.github.io/web-app-from-scratch-1920/)
+* [Demo](https://wesselsmit.github.io/web-app-from-scratch-1920/)
 * [Assignment](#assignment)
 * [Goal](#goal)
 * [Install-Notes](#install-notes)
@@ -49,7 +49,7 @@ This has 2 benefits:
 - Reduces the number of `API` calls
 - Only `fetches` missing data 
 
-## Data Saving
+### Data Saving
 
 Not everything from the data that the `API` returns is important, all unnecessary data object keys are deleted. This means the application uses a more compact data object which enhances the performance, also resulting in a smaller localStorage dataset.
 
@@ -97,7 +97,7 @@ The received data from NASA's APOD `API` that I use:
 * **explanation** | explanation of the image by a professional
 * **copyright** | copyright owner
 
-### Data cleaning
+## Data cleaning
 
 Because the data is stored in `localStorage` it's important the data is as small as possible so no unnessacary space is being wasted. In the cleaning `module` all properties that won't be used are `deleted`, the following properties are deleted:
 * service_version
@@ -119,6 +119,8 @@ The data contains no empty values, but data objects only contain the `copyright`
 
 ![image](https://user-images.githubusercontent.com/45405413/75254907-60b5b280-57e1-11ea-8f7d-b4e57f26a9ab.png)
 
+![image](https://user-images.githubusercontent.com/45405413/75294078-d17fbd80-5827-11ea-8f91-c70734165795.png)
+
 # Best Practices
 * Code should be easily readable
 * Only use shorthands if you really understand how they work
@@ -139,7 +141,7 @@ The data contains no empty values, but data objects only contain the `copyright`
 - [x] Allow users to filter (copyright/public domain)
 - [x] Allow users to sort (new/old)
 - [ ] Fetch data in bulks (per month)
-- [ ] Separate templates from code by putting them in a JSON/text file and fetching this in JS
+- [ ] Separate templates from code by putting them in a separate JSON/text file and fetching this in JS
 - [ ] Create a better "content management" function that only inserts content instead of content and HTML
 
 # Credits
