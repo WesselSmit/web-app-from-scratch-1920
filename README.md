@@ -117,7 +117,7 @@ The data contains no empty values, but data objects only contain the `copyright`
 
 # Interaction
 
-![image](https://user-images.githubusercontent.com/45405413/75246477-242d8b00-57d0-11ea-8fbf-218e90613dd9.png)
+![image](https://user-images.githubusercontent.com/45405413/75254812-37952200-57e1-11ea-8b72-508d3884c6bc.png)
 
 # Best Practices
 * Code should be easily readable
