@@ -117,9 +117,7 @@ The data contains no empty values, but data objects only contain the `copyright`
 
 # Interaction
 
-# TODO UPDATE HET INTERACTION DIAGRAM
-
-![image](https://user-images.githubusercontent.com/45405413/74486624-b030e000-4ebd-11ea-80d5-be96a5912162.png)
+![image](https://user-images.githubusercontent.com/45405413/75246477-242d8b00-57d0-11ea-8fbf-218e90613dd9.png)
 
 # Best Practices
 * Code should be easily readable
